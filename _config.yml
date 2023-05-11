@@ -1,0 +1,6 @@
+# theme: jekyll-theme-minimal
+name: Miss Refrain
+title: Miss Refrain
+site_path: https://missrefrain.github.io/
+# include: ['_projects']
+relative_permalinks: false

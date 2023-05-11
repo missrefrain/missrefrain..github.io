@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ site.site_path }}">
+            <span class="fs-6">{{ site.title }}:</span> 
+            <span class="text-uppercase">{{ site.name }}</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                {%- if site.data.global.navigation -%}
+                {%- assign navigation = site.data.global.navigation -%}
+              {%- else -%}
+                {%- assign navigation = '' | split: ',' -%}
+
+                {%- capture nav_data -%}
+                {%- include navigation.yml -%}
+                {%- endcapture -%}
+
+                {%- assign nav_array = nav_data | split: ' - ' %}
+                {%- for nav_item in nav_array -%}
+                  {%- if nav_item != '' -%}
+                    {%- assign nav_cleaned = nav_item | strip | replace: 'title: ', '' | replace: '   url: ', '' -%}
+                    {%- assign navigation = navigation | push: nav_cleaned -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+                <!-- <li class="nav-item"> -->
+                    <!-- <a class="nav-link active" aria-current="page" href="/home.html">Home</a> -->
+                <!-- </li> -->
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  
