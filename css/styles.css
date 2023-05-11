@@ -3,3 +3,8 @@
 body {
   font-family: "Segoe UI Emoji"
 }
+
+
+#home-page-art {
+  background-image: url('../assets/indexImg.jpg');
+}
