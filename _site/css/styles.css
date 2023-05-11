@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Pacifico&display=swap');
 
-body {
-  font-family: "Segoe UI Emoji"
+html {
+  
 }
 
-
-#home-page-art {
+body {
+  font-family: "Segoe UI Emoji";
+  background: none;
+backdrop-filter: sepia(1);
+    height: 100vh!important;
   background-image: url('../assets/indexImg.jpg');
+  
+  background-attachment: fixed;
+  background-size: 150vw 100vh;
+  background-repeat: no-repeat;
+}
+
+#index-body {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+@media (min-width:0px) and (max-width:575.98px) {
+  body {    
+    background-size: 300% 100vh;
+  }
 }
