@@ -10,7 +10,7 @@ body {
   background-image: url('../assets/indexImg.jpg');
   
   background-attachment: fixed;
-  background-size: 150vw 100vh;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
 
@@ -25,9 +25,14 @@ body {
   list-style-type: decimal;
 }
 
-
+@media (min-width:575.99px) and (max-width:768px) {
+  body {    
+    background-size: 150% 100vh;
+  }
+}
 @media (min-width:0px) and (max-width:575.98px) {
   body {    
     background-size: 300% 100vh;
   }
 }
+
