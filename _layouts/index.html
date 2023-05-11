@@ -12,9 +12,16 @@
 
                 <div class="col-12">
                     <div class="pt-5 mb-5">
-                        <h1 class="display-3">Miss Refrain</h1>
+                        <h1 class="display-3">{{ site.name }}</h1>
                         <figure>
-                            <h3 class="display-6 lh-1"></h3>
+                            <figcaption class="blockquote-footer">
+                                {{ site.title }}
+                            </figcaption>
+                            <blockquote class="blockquote">
+                                <p class="col-6 fs-5 fw-lighter lh-1 fst-italic">
+                                    {{ site.strap }}
+                                </p>
+                            </blockquote>
                         </figure>
                         
                         {{ content }}
