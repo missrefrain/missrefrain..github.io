@@ -9,111 +9,12 @@
         <div class="container mt-5 pt-5" id="home-page-art">
             <div class="row pt-4 pb-4">
                 
-                <script>
-                    let intervalID;
-                    let x, y;
-                    
-                    function setup() {
-                        let elt = document.getElementById('home-page-art');
-                        const canvas = createCanvas(windowWidth, windowHeight)
-                        canvas.addClass('fade-in-canvas')
-                        canvas.parent(elt)
-                        canvas.style("display", "block")
-                        canvas.style("position", "fixed")
-                        canvas.style("top", "0")
-                        canvas.style("left", "0")
-                        canvas.style("z-index", "-1")
-                        canvas.style("opacity", "0.7")
-                        x = windowWidth;
-                        y = windowHeight;
-                        rectMode(CENTER);
-                    }
- 
-                    function draw() {
-                        const artworkName = `A Blocks Eye View (Connections)`
-                        const artDate = `© 2023`
-                        const artistName = `Jahi Grant`
-                        const canvas = document.getElementById("defaultCanvas0");
-                        const ctx = canvas.getContext("2d");
-                        ctx.fillStyle = "black";
-                        ctx.font = "14px arial";
-                        ctx.direction = "ltr";
-                        ctx.textRendering = "geometricPrecision";
-                        ctx.fontKerning = "none";
-                        ctx.textAlign = "left";
-                        ctx.imageSmoothingEnabled = true;
-                        ctx.imageSmoothingQuality = "high";
-                        ctx.lineWidth = 0.5;
-                        ctx.translate(0, 0);
-                        ctx.fillText(
-                            "Commission: " + artworkName, 
-                            20, 
-                            canvas.height-100
-                        );
-                        ctx.fillText(
-                            "Artist: " + artistName, 
-                            20, 
-                            canvas.height-84
-                        );    
-                        ctx.fillText(
-                            "Year: " + artDate, 
-                            20, 
-                            canvas.height-70
-                        );            
-                        let canvasMetadata = artworkName + " By " + artistName;
-                        document.getElementById("defaultCanvas0").title = canvasMetadata;
-                        document.getElementById("defaultCanvas0").setAttribute('alt', canvasMetadata);
-
-                        for (let i = 0; i<radians(20); i+=radians(10000)) {
-
-                            push();
-
-                            const randomNumberSQGo = random(8);
-                            ctx.fillStyle = "grey";
-                            ctx.fillRect(random(x), random(y), randomNumberSQGo, randomNumberSQGo);
-
-                                rotate(0);
-                                fill(
-                                    random(255),
-                                    random(255),
-                                    random(255),
-                                    random(255)
-                                )
-                                square(
-                                    random(x),
-                                    random(y),
-                                    random(i-100)
-                                )
-                            pop();
-                        }
-                    }
-
-                    function stop() {
-                        clearInterval(intervalID);
-                        setup()
-                    }
-                    setInterval(stop, 100000); 
-
-                    window.addEventListener('resize', () => {
-                        clearInterval(intervalID);
-                        setup()
-                    });
-                    
-                </script>
 
                 <div class="col-12">
                     <div class="pt-5 mb-5">
-                        <h1 class="display-3">Port​fo​lio</h1>
+                        <h1 class="display-3">Miss Refrain</h1>
                         <figure>
-                            <h3 class="display-6 lh-1">Port·​fo·​lio</h3>
-                            <figcaption class="blockquote-footer">
-                                pɔːtˈfəʊ.li.əʊ
-                            </figcaption>
-                            <blockquote class="blockquote">
-                                <p class="col-6 fs-5 fw-lighter lh-1 fst-italic">
-                                    A collection of drawings, documents, etc. that represent a person's, especially an artist's, work:
-                                </p>
-                            </blockquote>
+                            <h3 class="display-6 lh-1"></h3>
                         </figure>
                         
                         {{ content }}
