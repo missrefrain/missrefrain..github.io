@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
 }
 
-#index-body, #footer-text, #footer-link {
+#footer-text, #footer-link {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: #fff!important;
   font-size: larger;
