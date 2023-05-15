@@ -18,15 +18,15 @@
         <link rel="stylesheet" href="" media="all">
         <script src=""></script>
         <!--meta properties -->
-        <meta name="description" content=" Your site description." >
+        <meta name="description" content= >
         <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
         <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" >
         <link rel="canonical" href="" >
         <!--open graph meta tags for social sites and search engines-->
         <meta property="og:locale" content="en_US" >
         <meta property="og:type" content="website" >
-        <meta property="og:title" content="  Opengraph content 25 char are best" >
-        <meta property="og:description" content="  #description." >
+        <meta property="og:title" content= >
+        <meta property="og:description" content= >
         <meta property="og:url" content="" >
         <meta property="og:site_name" content="" >
         <meta property="og:image" content="images//hom-banner-compressed.jpg" >
@@ -66,6 +66,7 @@
 
 
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/dropdown-select.css">
         
     </head>
 
@@ -96,59 +97,83 @@
   
 
 
-        <div class="container pt-5" id="index-body">
-            <div class="row pt-4 pb-4">
-                <div class="col-12">
-                    <div class="pt-5 mb-5">
-                        <h1 class="display-3 text-light">Miss Refrain</h1>
-                        <figure>
-                            <figcaption class="blockquote-footer text-light">
-                                Professional Dominatrix
-                            </figcaption>
-                            <blockquote class="blockquote">
-                                <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
-                                    She doesn't refrain from instilling pain
-                                </p>
-                            </blockquote>
-                        </figure>
-                        <div class="page-content">
-                            <h2 id="services">Services</h2>
-<ul>
-  <li>Rope bondage</li>
-  <li>Diaper discipline</li>
-  <li>Corporal punishment</li>
-  <li>Key holding/chastity</li>
-  <li>Foot worship</li>
-  <li>Sissy-fication</li>
-  <li>Submissive dress up</li>
-  <li>Role play</li>
-  <li>Gender transformation</li>
-  <li>Location ‘intimates’exchange</li>
-  <li>Mail order ‘intimates’ exchange</li>
-  <li>Weigh &amp; Measure the Dominatrix</li>
-  <li>Gold star Orgasm</li>
-  <li>FinDom*</li>
-  <li>Debt contract by date*</li>
-  <li>Masked fetish modelling</li>
-  <li>Phone sex</li>
-  <li>Masked camming</li>
-</ul>
+        <div class="wrapper">
+            <div class="message">
+                
+                <h1 class="display-3 text-light">Miss Refrain<small class="fs-6 text-light" style="white-space: pre-line;">Professional Dominatrix</small></h1>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
+                            She doesn't refrain from instilling pain
+                        </p>
+                    </blockquote>
+                </figure>
+              
+                <div class="page-content card p-4">
+                    
+                    <section>
+                        <div class="row d-flex justify-content-center mt-100">
 
-<p>(*Extra costs involved)</p>
+                            <form class="col-md-6">
 
-                        </div>
+                                <div class="form-group pb-4">
+                                    <label for="enterFirstName">First name</label>
+                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterFirstName" placeholder="John">
+                                </div>
+
+                                <div class="form-group pb-4">
+                                    <label for="enterSurname">Surname</label>
+                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterSurname" placeholder="Smythe">
+                                </div>   
+
+                                <div class="form-group pb-4">
+                                    <label for="enterEmail">Email address</label>
+                                    <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com">
+                                </div>                            
+                            
+                                <div class="form-group pb-4"> 
+                                    <label for="choices-multiple-remove-button">Select a service(s)</label>
+                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" multiple>
+                                        <option value='150.0' onclick="filterSelection('Rope bondage')">Rope bondage @ £150.0</option>
+                                        <option value='150.0'>Diaper discipline @ £150.0</option>
+                                        <option value='150.0'>Corporal punishment @ £150.0</option>
+                                        <option value='150.0'>Lock chastity @ £150.0</option>
+                                        <option value='150.0'>Foot worship @ £150.0</option>
+                                        <option value='150.0'>Sissy-fication @ £150.0</option>
+                                        <option value='150.0'>Submissive dress up @ £150.0</option>
+                                        <option value='150.0'>Role play @ £150.0</option>
+                                        <option value='150.0'>Gender transform @ £150.0</option>
+                                        <option value='150.0'>Location intimates @ £150.0</option>
+                                        <option value='150.0'>Mail order intimates @ £150.0</option>
+                                        <option value='150.0'>Weigh & measure @ £150.0</option>
+                                        <option value='150.0'>Gold star orgasm @ £150.0</option>
+                                        <option value='650.0'>FinDom @ £650.0</option>
+                                        <option value='650.0'>Debt contract @ £650.0</option>
+                                        <option value='150.0'>Fetish modelling @ £150.0</option>
+                                        <option value='150.0'>Phone sex @ £150.0</option>
+                                        <option value='150.0'>Masked camming @ £150.0</option>
+                                    </select>
+                                </div>
+
+                            </form>
                         
-                    </div>
+                        </div>
+                    </section>
+                    
+                    
+
+                
                 </div>
-            </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/9.1.0/choices.min.js"></script>
 
 <script src="/js/script.js" async defer></script>
+<script src="/js/main.js" async defer></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -195,5 +220,10 @@
       </ul>
     </footer>
   </div>
+            
+            </div>
+        
+        </div>
+    
     </body>
 </html>

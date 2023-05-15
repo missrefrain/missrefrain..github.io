@@ -1,38 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,900');
 
-html {
-}
 
-body {
-  font-family: "Segoe UI Emoji";
-  background: none;
-    height: 100vh!important;
+body { 
   background-image: url('../assets/indexImg.jpg');
-  
+  background-position: center center;
+  background-repeat:  no-repeat;
   background-attachment: fixed;
-  background-size: 100vw 100vh;
-  background-repeat: no-repeat;
+  background-size:  cover;
+  background-color: #999;
+
 }
 
-#footer-text, #footer-link {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: #fff!important;
-  font-size: larger;
+div, body{
+margin: 0;
+padding: 0;
+font-family: exo;
+
+}
+.wrapper {
+height: 100%; 
+width: 100%; 
+}
+
+.message {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 100%; 
+height:75%;
+bottom: 0; 
+display: block;
+position: absolute;
+background-color: rgba(0,0,0,0.6);
+padding: 0.5em;
 }
 
 
-#index-body{
-  list-style-type: decimal;
+
+#css-dropdown
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 80vw;
+    height: 42px;
+    margin: 100px auto 0 auto;
+}
+.form-control{
+  background-color: #f9f9f9;
 }
 
-@media (min-width:575.99px) and (max-width:768px) {
-  body {    
-    background-size: 150% 100vh;
-  }
-}
-@media (min-width:0px) and (max-width:575.98px) {
-  body {    
-    background-size: 300% 100vh;
-  }
-}
 
+.form-control:focus {
+  border-color: #b7b7b7!important;
+  box-shadow: none!important;
+  background-color: #f9f9f9;
+}

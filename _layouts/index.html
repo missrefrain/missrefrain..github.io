@@ -6,61 +6,78 @@
 
         {% include header.html %}
 
-        <div class="container pt-5" id="index-body">
-            <div class="row pt-4 pb-4">
-                <div class="col-12">
-                    <div class="pt-5 mb-5">
-                        <h1 class="display-3 text-light">{{ site.name }}</h1>
-                        <figure>
-                            <figcaption class="blockquote-footer text-light">
-                                {{ site.title }}
-                            </figcaption>
-                            <blockquote class="blockquote">
-                                <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
-                                    {{ site.strap }}
-                                </p>
-                            </blockquote>
-                        </figure>
-                        <div class="page-content card p-3">
+        <div class="wrapper">
+            <div class="message">
+                
+                <h1 class="display-3 text-light">{{ site.name }}<small class="fs-6 text-light" style="white-space: pre-line;">{{ site.title }}</small></h1>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
+                            {{ site.strap }}
+                        </p>
+                    </blockquote>
+                </figure>
+              
+                <div class="page-content card p-4">
+                    
+                    <section>
+                        <div class="row d-flex justify-content-center mt-100">
 
+                            <form class="col-md-6">
 
-<form>
-  <div class="form-group">
-    <label for="enterEmail">Email address</label>
-    <input type="email" class="form-control" id="enterEmail" placeholder="name@example.com">
-  </div>
-  
-  <div class="form-group">
-    <label for="pricesSelect">Services (multiple selection allowed)</label>
-    <select multiple class="form-control" id="pricesSelect">
-<option value=`"{{ site.services[0] }}"` >{{ site.services[0] }}</option>
-<option value=`"{{ site.services[1] }}"`>{{ site.services[1] }}</option>
-<option value=`"{{ site.services[2] }}"`>{{ site.services[2] }}</option>
-<option value=`"{{ site.services[3] }}"`>{{ site.services[3] }}</option>
-<option value=`"{{ site.services[4] }}"`>{{ site.services[4] }}</option>
-<option value=`"{{ site.services[5] }}"`>{{ site.services[5] }}</option>
-<option value=`"{{ site.services[6] }}"`>{{ site.services[6] }}</option>
-<option value=`"{{ site.services[7] }}"`>{{ site.services[7] }}</option>
-<option value=`"{{ site.services[8] }}"`>{{ site.services[8] }}</option>
-<option value=`"{{ site.services[9] }}"`>{{ site.services[9] }}</option>
-<option value=`"{{ site.services[10] }}"`>{{ site.services[10] }}</option>
-<option value=`"{{ site.services[11] }}"`>{{ site.services[11] }}</option>
-<option value=`"{{ site.services[12] }}"`>{{ site.services[12] }}</option>
-<option value=`"{{ site.services[13] }}"`>{{ site.services[13] }}</option>
-<option value=`"{{ site.services[14] }}"`>{{ site.services[14] }}</option>
-<option value=`"{{ site.services[15] }}"`>{{ site.services[15] }}</option>
-<option value=`"{{ site.services[16] }}"`>{{ site.services[16] }}</option>
-    </select>
-  </div>
-</form>
+                                <div class="form-group pb-4">
+                                    <label for="enterFirstName">First name</label>
+                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterFirstName" placeholder="John">
+                                </div>
 
-                            {{ content }}
-                        </div>
+                                <div class="form-group pb-4">
+                                    <label for="enterSurname">Surname</label>
+                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterSurname" placeholder="Smythe">
+                                </div>   
+
+                                <div class="form-group pb-4">
+                                    <label for="enterEmail">Email address</label>
+                                    <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com">
+                                </div>                            
+                            
+                                <div class="form-group pb-4"> 
+                                    <label for="choices-multiple-remove-button">Select a service(s)</label>
+                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" multiple>
+                                        <option value='{{ site.hour_rate }}' onclick="filterSelection('{{ site.services[0] }}')">{{ site.services[0] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[1] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[2] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[3] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[4] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[5] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[6] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[7] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[8] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[9] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[10] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[11] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[12] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.findom_price }}'>{{ site.services[13] }} @ £{{ site.findom_price }}</option>
+                                        <option value='{{ site.debt_contract_price }}'>{{ site.services[14] }} @ £{{ site.debt_contract_price }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[15] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[16] }} @ £{{ site.hour_rate }}</option>
+                                        <option value='{{ site.hour_rate }}'>{{ site.services[17] }} @ £{{ site.hour_rate }}</option>
+                                    </select>
+                                </div>
+
+                            </form>
                         
-                    </div>
+                        </div>
+                    </section>
+                    
+                    {{ content }}
+                
                 </div>
+                
+                {% include footer.html %}
+            
             </div>
+        
         </div>
-        {% include footer.html %}
+    
     </body>
 </html>
