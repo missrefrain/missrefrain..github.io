@@ -42,7 +42,7 @@
                             
                                 <div class="form-group pb-4"> 
                                     <label for="choices-multiple-remove-button">Select a service(s)</label>
-                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" multiple>
+                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" multiple>
                                         <option value='{{ site.hour_rate }}' onclick="filterSelection('{{ site.services[0] }}')">{{ site.services[0] }} @ £{{ site.hour_rate }}</option>
                                         <option value='{{ site.hour_rate }}'>{{ site.services[1] }} @ £{{ site.hour_rate }}</option>
                                         <option value='{{ site.hour_rate }}'>{{ site.services[2] }} @ £{{ site.hour_rate }}</option>
@@ -63,6 +63,12 @@
                                         <option value='{{ site.hour_rate }}'>{{ site.services[17] }} @ £{{ site.hour_rate }}</option>
                                     </select>
                                 </div>
+
+                                <div class="form-group pb-4">
+                                    <label for="servicesTotal">Total</label>
+                                    <input id="servicesTotal" class="form-control" type="text" value="" aria-label="readonly input" readonly>
+
+                                </div>   
 
                             </form>
                         

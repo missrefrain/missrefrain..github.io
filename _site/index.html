@@ -18,15 +18,15 @@
         <link rel="stylesheet" href="" media="all">
         <script src=""></script>
         <!--meta properties -->
-        <meta name="description" content= >
+        <meta name="description" content= ''>
         <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
         <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" >
         <link rel="canonical" href="" >
         <!--open graph meta tags for social sites and search engines-->
         <meta property="og:locale" content="en_US" >
         <meta property="og:type" content="website" >
-        <meta property="og:title" content= >
-        <meta property="og:description" content= >
+        <meta property="og:title" content= ''>
+        <meta property="og:description" content='' >
         <meta property="og:url" content="" >
         <meta property="og:site_name" content="" >
         <meta property="og:image" content="images//hom-banner-compressed.jpg" >
@@ -133,7 +133,7 @@
                             
                                 <div class="form-group pb-4"> 
                                     <label for="choices-multiple-remove-button">Select a service(s)</label>
-                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" multiple>
+                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" multiple>
                                         <option value='150.0' onclick="filterSelection('Rope bondage')">Rope bondage @ £150.0</option>
                                         <option value='150.0'>Diaper discipline @ £150.0</option>
                                         <option value='150.0'>Corporal punishment @ £150.0</option>
@@ -154,6 +154,12 @@
                                         <option value='150.0'>Masked camming @ £150.0</option>
                                     </select>
                                 </div>
+
+                                <div class="form-group pb-4">
+                                    <label for="servicesTotal">Total</label>
+                                    <input id="servicesTotal" class="form-control" type="text" value="" aria-label="readonly input" readonly>
+
+                                </div>   
 
                             </form>
                         
