@@ -85,12 +85,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav"><!-- <li class="nav-item"> -->
-                    <!-- <a class="nav-link active" aria-current="page" href="/home.html">Home</a> -->
-                <!-- </li> -->
+            <ul class="navbar-nav"><li class="nav-item"> 
+                    <a class="nav-link active" aria-current="page" href="">Home</a> 
+                </li>
 
             </ul>
         </div>
+
+
+
+
+
+
+
     </div>
 </nav>
 
@@ -99,6 +106,8 @@
 
         <div class="wrapper">
             <div class="message">
+
+                
                 
                 <h1 class="display-3 text-light">Miss Refrain<small class="fs-6 text-light" style="white-space: pre-line;">Professional Dominatrix</small></h1>
                 <figure>
@@ -109,12 +118,14 @@
                     </blockquote>
                 </figure>
               
-                <div class="page-content card p-4">
+                <div class="page-content card p-4" >
+
+                    <div id="booking_component"></div>
                     
                     <section>
                         <div class="row d-flex justify-content-center mt-100">
 
-                            <form class="col-md-6">
+                            <form class="col-md-6" id="booking">
 
                                 <div class="form-group pb-4">
                                     <label for="enterFirstName">First name</label>
@@ -134,30 +145,35 @@
                                 <div class="form-group pb-4"> 
                                     <label for="choices-multiple-remove-button">Select a service(s)</label>
                                     <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" multiple>
-                                        <option value='150.0' onclick="filterSelection('Rope bondage')">Rope bondage @ £150.0</option>
-                                        <option value='150.0'>Diaper discipline @ £150.0</option>
-                                        <option value='150.0'>Corporal punishment @ £150.0</option>
-                                        <option value='150.0'>Lock chastity @ £150.0</option>
-                                        <option value='150.0'>Foot worship @ £150.0</option>
-                                        <option value='150.0'>Sissy-fication @ £150.0</option>
-                                        <option value='150.0'>Submissive dress up @ £150.0</option>
-                                        <option value='150.0'>Role play @ £150.0</option>
-                                        <option value='150.0'>Gender transform @ £150.0</option>
-                                        <option value='150.0'>Location intimates @ £150.0</option>
-                                        <option value='150.0'>Mail order intimates @ £150.0</option>
-                                        <option value='150.0'>Weigh & measure @ £150.0</option>
-                                        <option value='150.0'>Gold star orgasm @ £150.0</option>
-                                        <option value='650.0'>FinDom @ £650.0</option>
-                                        <option value='650.0'>Debt contract @ £650.0</option>
-                                        <option value='150.0'>Fetish modelling @ £150.0</option>
-                                        <option value='150.0'>Phone sex @ £150.0</option>
-                                        <option value='150.0'>Masked camming @ £150.0</option>
+                                        <option class="amount" value='150'>Rope bondage @ £150</option>
+                                        <option class="amount" value='150'>Diaper discipline @ £150</option>
+                                        <option class="amount" value='150'>Corporal punishment @ £150</option>
+                                        <option class="amount" value='150'>Lock chastity @ £150</option>
+                                        <option class="amount" value='150'>Foot worship @ £150</option>
+                                        <option class="amount" value='150'>Sissy-fication @ £150</option>
+                                        <option class="amount" value='150'>Submissive dress up @ £150</option>
+                                        <option class="amount" value='150'>Role play @ £150</option>
+                                        <option class="amount" value='150'>Gender transform @ £150</option>
+                                        <option class="amount" value='150'>Location intimates @ £150</option>
+                                        <option class="amount" value='150'>Mail order intimates @ £150</option>
+                                        <option class="amount" value='150'>Weigh & measure @ £150</option>
+                                        <option class="amount" value='150'>Gold star orgasm @ £150</option>
+                                        <option class="amount" value='650'>FinDom @ £650</option>
+                                        <option class="amount" value='650'>Debt contract @ £650</option>
+                                        <option class="amount" value='150'>Fetish modelling @ £150</option>
+                                        <option class="amount" value='150'>Phone sex @ £150</option>
+                                        <option class="amount" value='150'>Masked camming @ £150</option>
                                     </select>
                                 </div>
 
+                                <div class="form-group pb-0">
+                                    <input id="servicesTotal" class="total-input form-control invisible" type="text" value="" aria-label="hidden input" hidden>
+
+                                </div> 
+
                                 <div class="form-group pb-4">
-                                    <label for="servicesTotal">Total</label>
-                                    <input id="servicesTotal" class="form-control" type="text" value="" aria-label="readonly input" readonly>
+                                    <label for="Total">Total</label>
+                                    <input id="Total" class="total form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" type="text" value="" aria-label="readonly input" readonly>
 
                                 </div>   
 
@@ -178,8 +194,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/9.1.0/choices.min.js"></script>
 
+
+
 <script src="/js/script.js" async defer></script>
 <script src="/js/main.js" async defer></script>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -201,12 +220,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+
 
 <!-- <script type="text/babel" src="/js/projects-nav.js"></script> -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+<script type="text/babel" src="/js/booking.js"></script>
 
 <div class="container-fluid">
 
