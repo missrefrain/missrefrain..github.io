@@ -1,25 +1,12 @@
 <?PHP
 
-require_once("./include/contactform.php");
-
-$formproc = new FGContactForm();
-
-//1. Add your email address here.
-//You can add more than one recipients.
-$formproc->AddRecipient('missrefrain@gmail.com'); //<<---Put your
-                                                          //email address here
-
-//2. For better security. Get a random string from
-// this link: http://tinyurl.com/randstr
-// and put it here
-$formproc->SetFormRandomKey('OLbmn0WHjuDRwJf');
-
-if(isset($_POST['submitted']))
-{
-   if($formproc->ProcessForm())
-   {
-        $formproc->RedirectToURL("thank-you.html");
-   }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $phpmailer = new PHPMailer();
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = '95e982593f388b';
+    $phpmailer->Password = '3ca1df484c31ae';
 }
-
 ?>

@@ -6,10 +6,12 @@
 
         {% include header.html %}
 
+
+     
+
+
         <div class="wrapper">
             <div class="message">
-
-                
                 
                 <h1 class="display-3 text-light">{{ site.name }}<small class="fs-6 text-light" style="white-space: pre-line;">{{ site.title }}</small></h1>
                 <figure>
@@ -27,84 +29,7 @@
                     <section>
                         <div class="row d-flex justify-content-center mt-100">
 
-                            <form class="col-md-6 needs-validation" id="booking" action="contactform.php" method="post" enctype="text/plain">
-
-                                <input class="form-input" type="hidden" name="apikey" value="access_key" >
-
-                                <div class="form-group pb-4">
-                                    <label class="form-label" for="enterFirstName">First name</label>
-                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterFirstName" placeholder="John" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter your first name.
-                                    </div>
-                                </div>
-
-                                <div class="form-group pb-4">
-                                    <label for="enterSurname">Surname</label>
-                                    <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterSurname" placeholder="Smythe" required>
-                                </div>   
-
-                                <div class="form-group pb-4">
-                                    <label for="enterEmail">Email address</label>
-                                    <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" required>
-                                </div>                            
-                            
-                                <div class="form-group pb-4"> 
-                                    <label for="choices-multiple-remove-button">Select a service(s)</label>
-                                    <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" name="serviceselect" multiple required>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[0] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[1] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[2] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[3] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[4] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[5] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[6] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[7] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[8] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[9] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[10] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[11] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[12] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.findom_price }}'>{{ site.services[13] }} @ £{{ site.findom_price }}</option>
-                                        <option class="amount" value='{{ site.debt_contract_price }}'>{{ site.services[14] }} @ £{{ site.debt_contract_price }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[15] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[16] }} @ £{{ site.hour_rate }}</option>
-                                        <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[17] }} @ £{{ site.hour_rate }}</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group pb-0">
-                                    <input id="servicesTotal" class="total-input form-control invisible" type="text" value="" aria-label="hidden input" hidden>
-                                </div> 
-
-                                <div class="form-group pb-4">
-                                    <label for="Total">Total</label>
-                                    <input id="Total" class="total form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" type="text" value="" aria-label="readonly input" readonly>
-                                </div>   
-
-                                <div class="col-12">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                      <label class="form-check-label" for="invalidCheck">
-                                        Agree to terms and conditions
-                                      </label>
-                                      <div class="invalid-feedback">
-                                        You must agree before submitting.
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="d-grid gap-2 pt-4">
-                                    <button class="btn btn-primary btn-lg rounded-0" type="submit" id="encrypt-button" disabled>
-                                        Confirm order
-                                    </button>
-                                  </div>
-
-
-                            </form>
+                            {% include _booking/booking.html %}
                         
                         </div>
                     </section>
