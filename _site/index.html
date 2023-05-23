@@ -124,38 +124,225 @@
 
                     <div id="booking_component"></div>
                     
-                    <section>
-                        <div class="row d-flex justify-content-center mt-100">
+                    
 
-                            <div className="text-center">
-    <div id="booking_component">123</div>
+                            <section>
+    <div class="row d-flex justify-content-center mt-100 mt-4">
 
-    <form class="col-md-6 needs-validation" id="booking" action="https://formspree.io/f/mgebqnyl" method="POST">
+<div className="text-center">
+    <div id="booking_component"></div>
 
-        <div class="form-group pb-4">
-            <label class="form-label" for="enterFirstName">First name</label>
-            <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterFirstName" placeholder="John" name="firstname" required>
+    <form class="col-md-12 row g-3 needs-validation" id="booking" action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="b0d20c07-f3f1-4997-910b-cc3171d8b9db">
+        <input
+            type="hidden"
+            name="subject"
+            value="A new booking from Miss Refrain"
+          >
+          <input type="checkbox" name="botcheck" id="" style="display: none;" >
+          <input type="hidden" name="from_name" value="Miss Refrain">
+
+
+        <div class="input-group mb-2">
+            <label class="form-label col-12" for="enterName">Enter your name</label>
+            <select id="prefix-choice" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="prefixselect" width="20" style="width: auto;" required>
+                <option selected>Choose Title</option>
+                <option value='Mr.'>Mr.</option>
+                <option value='Miss.'>Miss.</option>
+                <option value='Ms.'>Ms.</option>
+            </select>
+            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterName" placeholder="John Smythe" name="firstname" style="width: 75%;" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="invalid-feedback">
-                Please enter your first name.
+                Please enter your name.
+            </div>
+        </div>
+   
+
+        <div class="col-md-6 pb-2">
+            <label for="enterEmail">Email address</label>
+            <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" name="email" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>             
+        <div class="col-md-6 pb-3">
+            <label for="enterEmailConfirm">Confirm Email address</label>
+            <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmailConfirm" placeholder="name@example.com" name="email" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>    
+        
+        <div class="col-md-6 pb-2">
+            <label for="enterTelephone">Telephone Number</label>
+            <input type="tel" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephone" placeholder="07970 000 000" name="phone" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your Telephone/Mobile Number.
+            </div>
+        </div>             
+        <div class="col-md-6 pb-3">
+            <label for="enterTelephoneConfirm">Confirm Telephone Number</label>
+            <input type="tel" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephoneConfirm" placeholder="07970 000 000" name="phone" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter your email address.
             </div>
         </div>
 
-        <div class="form-group pb-4">
-            <label for="enterSurname">Surname</label>
-            <input type="text" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterSurname" placeholder="Smythe" name="surname" required>
-        </div>   
 
-        <div class="form-group pb-4">
-            <label for="enterEmail">Email address</label>
-            <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" name="email" required>
-        </div>                            
+        
+        <div class="col-12 mt-1">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="inputAddress" placeholder="1234 Main St" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputTown">Town</label>
+            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" placeholder="Greenwich" id="inputTown" required>
+        </div>
+
+        <div class="col-md-4">
+            <label for="inputState">County</label>
+            <select id="inputState" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" required>
+                <option selected>Choose County</option>
+                <optgroup label="England">
+                    <option>Bedfordshire</option>
+                    <option>Berkshire</option>
+                    <option>Bristol</option>
+                    <option>Buckinghamshire</option>
+                    <option>Cambridgeshire</option>
+                    <option>Cheshire</option>
+                    <option>City of London</option>
+                    <option>Cornwall</option>
+                    <option>Cumbria</option>
+                    <option>Derbyshire</option>
+                    <option>Devon</option>
+                    <option>Dorset</option>
+                    <option>Durham</option>
+                    <option>East Riding of Yorkshire</option>
+                    <option>East Sussex</option>
+                    <option>Essex</option>
+                    <option>Gloucestershire</option>
+                    <option>Greater London</option>
+                    <option>Greater Manchester</option>
+                    <option>Hampshire</option>
+                    <option>Herefordshire</option>
+                    <option>Hertfordshire</option>
+                    <option>Isle of Wight</option>
+                    <option>Kent</option>
+                    <option>Lancashire</option>
+                    <option>Leicestershire</option>
+                    <option>Lincolnshire</option>
+                    <option>Merseyside</option>
+                    <option>Norfolk</option>
+                    <option>North Yorkshire</option>
+                    <option>Northamptonshire</option>
+                    <option>Northumberland</option>
+                    <option>Nottinghamshire</option>
+                    <option>Oxfordshire</option>
+                    <option>Rutland</option>
+                    <option>Shropshire</option>
+                    <option>Somerset</option>
+                    <option>South Yorkshire</option>
+                    <option>Staffordshire</option>
+                    <option>Suffolk</option>
+                    <option>Surrey</option>
+                    <option>Tyne and Wear</option>
+                    <option>Warwickshire</option>
+                    <option>West Midlands</option>
+                    <option>West Sussex</option>
+                    <option>West Yorkshire</option>
+                    <option>Wiltshire</option>
+                    <option>Worcestershire</option>
+                </optgroup>
+                <optgroup label="Wales">
+                    <option>Anglesey</option>
+                    <option>Brecknockshire</option>
+                    <option>Caernarfonshire</option>
+                    <option>Carmarthenshire</option>
+                    <option>Cardiganshire</option>
+                    <option>Denbighshire</option>
+                    <option>Flintshire</option>
+                    <option>Glamorgan</option>
+                    <option>Merioneth</option>
+                    <option>Monmouthshire</option>
+                    <option>Montgomeryshire</option>
+                    <option>Pembrokeshire</option>
+                    <option>Radnorshire</option>
+                </optgroup>
+                <optgroup label="Scotland">
+                    <option>Aberdeenshire</option>
+                    <option>Angus</option>
+                    <option>Argyllshire</option>
+                    <option>Ayrshire</option>
+                    <option>Banffshire</option>
+                    <option>Berwickshire</option>
+                    <option>Buteshire</option>
+                    <option>Cromartyshire</option>
+                    <option>Caithness</option>
+                    <option>Clackmannanshire</option>
+                    <option>Dumfriesshire</option>
+                    <option>Dunbartonshire</option>
+                    <option>East Lothian</option>
+                    <option>Fife</option>
+                    <option>Inverness-shire</option>
+                    <option>Kincardineshire</option>
+                    <option>Kinross</option>
+                    <option>Kirkcudbrightshire</option>
+                    <option>Lanarkshire</option>
+                    <option>Midlothian</option>
+                    <option>Morayshire</option>
+                    <option>Nairnshire</option>
+                    <option>Orkney</option>
+                    <option>Peeblesshire</option>
+                    <option>Perthshire</option>
+                    <option>Renfrewshire</option>
+                    <option>Ross-shire</option>
+                    <option>Roxburghshire</option>
+                    <option>Selkirkshire</option>
+                    <option>Shetland</option>
+                    <option>Stirlingshire</option>
+                    <option>Sutherland</option>
+                    <option>West Lothian</option>
+                    <option>Wigtownshire</option>
+                </optgroup>
+                <optgroup label="Northern Ireland">
+                    <option>Antrim</option>
+                    <option>Armagh</option>
+                    <option>Down</option>
+                    <option>Fermanagh</option>
+                    <option>Londonderry</option>
+                    <option>Tyrone</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputZip">Post code</label>
+            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="inputZip" required>
+        </div>
+
+
     
         <div class="form-group pb-4"> 
             <label for="choices-multiple-remove-button">Select a service(s)</label>
             <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" name="serviceselect" multiple required>
+                <!-- <option id="placeHolder" value="Choose County" selected>Choose County</option> -->
                 <option class="amount" value='150'>Rope bondage @ £150</option>
                 <option class="amount" value='150'>Diaper discipline @ £150</option>
                 <option class="amount" value='150'>Corporal punishment @ £150</option>
@@ -177,40 +364,41 @@
             </select>
         </div>
 
-        <div class="form-group pb-0">
-            <input id="servicesTotal" class="total-input form-control invisible" type="text" value="" name="hidemath" aria-label="hidden input" hidden>
-        </div> 
-
         <div class="form-group pb-4">
             <label for="Total">Total</label>
             <input id="Total" class="total form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" type="text" value="" aria-label="readonly input" name="servicestotal" readonly>
         </div>   
 
-        <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="agreeterms"required>
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
+        <div class="d-grid gap-2 pt-4 mb-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="invalidCheck" name="agree_to_terms" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before booking.
+                </div>
             </div>
-          </div>
+        </div>
 
-          <div class="d-grid gap-2 pt-4">
-            <button class="btn btn-primary btn-lg rounded-0" type="submit" id="encrypt-button">
-                Confirm order
+        <div class="h-captcha" data-captcha="true"></div>
+
+        <div class="d-grid gap-2 pt-4 mb-4">
+            <button class="btn btn-primary btn-lg rounded-0 disabled" type="submit" id="encrypt-button">
+                 Confirm booking
             </button>
-          </div>
+        </div>
 
-
+          <p class="text-base text-center text-gray-400" id="result"></p>
     </form>
 
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </div>
+
+</div>
+</section>
                         
-                        </div>
-                    </section>
+                   
                     
                     
 

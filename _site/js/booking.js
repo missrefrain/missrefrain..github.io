@@ -1,7 +1,59 @@
 $(document).ready(function(){
 
-    
+    document.getElementById('Total').value = "";
 
+    function uuidv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+          (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
+      }
+      
+      console.log(uuidv4());
+
+    const form = document.getElementById("booking");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        result.innerHTML = "Please wait...";
+      
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.innerHTML = json.message;
+              result.classList.remove("text-gray-500");
+              result.classList.add("text-green-500");
+            } else {
+              console.log(response);
+              result.innerHTML = json.message;
+              result.classList.remove("text-gray-500");
+              result.classList.add("text-red-500");
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+          })
+          .then(function () {
+            form.reset();
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
 
     var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
         removeItemButton: true,
@@ -10,64 +62,58 @@ $(document).ready(function(){
         renderChoiceLimit:20
     });
 
+// $(".choices__inner").on('click', function() {
+
+//             $("#choices-multiple-remove-button option[value='Choose County']").remove();
+//          });
+
     function calculate() {
         var selectElement = document.getElementById('choices-multiple-remove-button');
-        document.getElementById('Total').value = "£0.00";
+        let totalInput = document.getElementById('Total');
+        totalInput.value = "£0.00";
+
+        
 
         $(".services-input").on('change', function() {
-            document.getElementById('Total').value = "£0.00";
 
-            let services = document.getElementsByClassName("services-input");
-            let totalinput = document.getElementsByClassName("total-input");
-            let y = Number(this.value);
-       
-            var arr = document.getElementsByClassName('choices__item--selectable');
-            var tot=0;
-            for(var i=0;i<arr.length;i++){
-                switch (arr) {
-                    case null:
-                        break;
-                    default:
-                        console.log(parseFloat(arr[i].attributes[3].textContent));
-                        if(parseFloat(arr[i].value) !== NaN)
-                        
-                            tot = arr[i].attributes[3].textContent;
-                            const toStr = tot
-                            const UrlFormat = toStr.replaceAll('NaN', " ");
-                            const url = _.toArray(UrlFormat); 
 
-                            if (url.length == 0) {
-                            } else {
-                                url.forEach(element => {
-                                    const str = element;
-                                    const result = str.replaceAll("0", "0.00 ");
-                                    document.getElementById('servicesTotal').value += result; 
-                                }); 
-                                const myArray = totalinput[0].value;
-                                const newArray = _.castArray([myArray]);
-                                let araToStr = _.toString(newArray)
-                                const endArray = araToStr.split(" ");
-                                let word = endArray;
-                                console.log(word);
-                                
-                                var nums = word.map(function(str) {
-                                    return parseInt(str); 
-                                });
-                                console.log(nums)
-                                let newArr = nums.slice(0, -1);
-                                console.log(_.sum(newArr))
 
-                                console.log(selectElement.childElementCount);
-                                if ( selectElement == _.isEmpty() ) {
-                                    document.getElementById('Total').value = "£";
-                                } else {
-                                    document.getElementById('Total').value = "£"+_.sum(newArr)+".00";
-                                }
-                            } 
-                    break;
-                }
+            console.log("xxxxxxxxxxxxxxxxxxxxxxxx " + selectElement.childElementCount);
+            let childArr = _.range(selectElement.childElementCount);
+            let totalArray = []
+            for (let j = 0; j < childArr.length; j++) {
+
+                const element = childArr[j];
+                console.log("zzzzzzzzzzzzzzzzzzzzzzzz " + element + selectElement[element].value);
+                console.log(parseInt(selectElement[element].value));
+                let priceInterger = parseInt(selectElement[element].value)
+                totalArray.push(priceInterger);
             }
-        });   
+            console.log(totalArray);
+            console.log("£"+_.sum(totalArray)+".00");
+            
+            totalInput.value = "£"+_.sum(totalArray)+".00";
+
+ 
+                
+    let element = document.getElementById("encrypt-button");
+    let invalidCheck = document.getElementById("invalidCheck");
+
+            if (totalInput.value == "£0.00") {
+                $(invalidCheck).prop("checked", false);
+                element.classList.add("disabled");
+            } else {
+                invalidCheck.addEventListener('change', () => {
+                    if (invalidCheck.checked && totalInput.value !== "£0.00") {
+                        element.classList.remove("disabled");
+                        
+                    }
+                });
+            }
+
+            
+
+        });
     }
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
