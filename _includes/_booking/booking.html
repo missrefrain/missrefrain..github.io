@@ -214,7 +214,7 @@
         <div class="form-group pb-4" id="servicesSelection"> 
             <label for="choices-multiple-remove-button">Select a service(s)</label>
             <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" name="serviceselect" multiple required>
-                <option id="placeHolder" value="Choose County" selected hidden>Choose a service</option>
+                <option name="placeHolder" selected disabled>Choose a service</option>
                 <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[0] }} @ £{{ site.hour_rate }}</option>
                 <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[1] }} @ £{{ site.hour_rate }}</option>
                 <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[2] }} @ £{{ site.hour_rate }}</option>

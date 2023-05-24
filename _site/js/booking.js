@@ -72,15 +72,22 @@ $(document).ready(function(){
         let totalInput = document.getElementById('Total');
         totalInput.value = "£0.00";
 
-        
-
         $(".services-input").on('change', function() {
-
-    this[0].remove();
-
 
             console.log("xxxxxxxxxxxxxxxxxxxxxxxx " + selectElement.childElementCount);
             let childArr = _.range(selectElement.childElementCount);
+
+            const select = document.querySelector('#choices-multiple-remove-button'); 
+
+            for (let i = 0; i < 1; i++) {
+                const selected = childArr[i];
+                var removeOption = _.remove(selectElement[0])
+                console.log(selectElement[0])
+            }
+            
+     
+        
+           
             let totalArray = []
             for (let j = 0; j < childArr.length; j++) {
 
