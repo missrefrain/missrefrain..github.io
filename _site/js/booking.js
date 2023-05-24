@@ -13,47 +13,47 @@ $(document).ready(function(){
     const form = document.getElementById("booking");
     const result = document.getElementById("result");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    // form.addEventListener("submit", function (e) {
+    //     e.preventDefault();
         
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+    //     const formData = new FormData(form);
+    //     const object = Object.fromEntries(formData);
+    //     const json = JSON.stringify(object);
         
-        result.innerHTML = "Please wait...";
+    //     result.innerHTML = "Please wait...";
       
-        fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: json,
-        })
-          .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-              result.innerHTML = json.message;
-              result.classList.remove("text-gray-500");
-              result.classList.add("text-green-500");
-            } else {
-              console.log(response);
-              result.innerHTML = json.message;
-              result.classList.remove("text-gray-500");
-              result.classList.add("text-red-500");
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-          })
-          .then(function () {
-            form.reset();
-            setTimeout(() => {
-              result.style.display = "none";
-            }, 5000);
-          });
-      });
+    //     fetch("https://api.web3forms.com/submit", {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Accept: "application/json",
+    //       },
+    //       body: json,
+    //     })
+    //       .then(async (response) => {
+    //         let json = await response.json();
+    //         if (response.status == 200) {
+    //           result.innerHTML = json.message;
+    //           result.classList.remove("text-gray-500");
+    //           result.classList.add("text-green-500");
+    //         } else {
+    //           console.log(response);
+    //           result.innerHTML = json.message;
+    //           result.classList.remove("text-gray-500");
+    //           result.classList.add("text-red-500");
+    //         }
+    //       })
+    //       .catch((error) => {
+    //         console.log(error);
+    //         result.innerHTML = "Something went wrong!";
+    //       })
+    //       .then(function () {
+    //         form.reset();
+    //         setTimeout(() => {
+    //           result.style.display = "none";
+    //         }, 5000);
+    //       });
+    //   });
 
     var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
         removeItemButton: true,
@@ -64,66 +64,177 @@ $(document).ready(function(){
 
 
  
+    const url = 'https://script.google.com/macros/s/AKfycbyMMJwQQ7QS89_A3bVy4CiJyadPV04IyWTDpVXxUGN_3h1bwMRB3u1nsZkCypG8wEtBxQ/exec';
 
+    const myForm = document.querySelector('#myForm');
+    
+    const myName = document.querySelector('#name');
+    
+    const myEmail = document.querySelector('#email');
+    
+    const myMessage = document.querySelector('#message');
+    
+     myName.value = 'Miss Refrain';
+    
+    myEmail.value = 'miss.refrain@gmail.com';
+    
+    myMessage.value = 'Hello World';
+    
+    myForm.addEventListener('submit', submitter);
+    
+     function submitter(e) {
+    
+       console.log('submitted');
+    
+       e.preventDefault();
+    
+       let message = '';
+    
+       if (myName.value.length < 5) {
+    
+           myName.style.borderColor = 'red';
+    
+           message += `<br>Name needs to be 5 characters`;
+    
+       }
+    
+       if (myEmail.value.length < 5) {
+    
+           myEmail.style.borderColor = 'red';
+    
+           message += `<br>Email is missing`;
+    
+       }
+    
+       if (message) {
+    
+           const div = document.createElement('div');
+    
+           div.innerHTML = message;
+    
+           div.style.color = 'red';
+    
+           myForm.append(div);
+    
+           setTimeout(() => {
+    
+               div.remove();
+    
+               myName.style.borderColor = '';
+    
+               myEmail.style.borderColor = '';
+    
+           }, 5000);
+    
+        } else {
+    
+           const myObj = {
+    
+               name: myName.value,
+    
+               email: myEmail.value,
+    
+               message: myMessage.value
+    
+           };
+    
+           console.log(myObj);
+    
+       }
+    
+    }
 
+    function addSendMail(data){
 
-    function calculate() {
-        var selectElement = document.getElementById('choices-multiple-remove-button');
-        let totalInput = document.getElementById('Total');
-        totalInput.value = "£0.00";
-
-        $(".services-input").on('change', function() {
-
-            console.log("xxxxxxxxxxxxxxxxxxxxxxxx " + selectElement.childElementCount);
-            let childArr = _.range(selectElement.childElementCount);
-
-            const select = document.querySelector('#choices-multiple-remove-button'); 
-
-            for (let i = 0; i < 1; i++) {
-                const selected = childArr[i];
-                var removeOption = _.remove(selectElement[0])
-                console.log(selectElement[0])
-            }
-            
+        console.log(data);
      
-        
-           
-            let totalArray = []
-            for (let j = 0; j < childArr.length; j++) {
+        fetch(url,{
+     
+            method:'POST',
+     
+            body:JSON.stringify(data)
+     
+        })
+     
+        .then(res => res.json())
+     
+        .then(json =>{
+     
+            console.log(json);
+     
+        })
+     
+     }
+     function addSendMailGET(data){
 
-                const element = childArr[j];
+        const url1 = url + '?id=100';
+     
+        fetch(url1)
+     
+        .then(res => res.json())
+     
+        .then(json =>{
+     
+            console.log(json);
+     
+        })
+     
+     }
+
+    // function calculate() {
+    //     var selectElement = document.getElementById('choices-multiple-remove-button');
+    //     let totalInput = document.getElementById('Total');
+    //     totalInput.value = "£0.00";
+
+    //     $(".services-input").on('change', function() {
+
+    //         console.log("xxxxxxxxxxxxxxxxxxxxxxxx " + selectElement.childElementCount);
+    //         let childArr = _.range(selectElement.childElementCount);
+
+    //         const select = document.querySelector('#choices-multiple-remove-button'); 
+
+    //         for (let i = 0; i < 1; i++) {
+    //             const selected = childArr[i];
+    //             var removeOption = _.remove(selectElement[0])
+    //             console.log(selectElement[0])
+    //         }
+
+    //         let totalArray = []
+    //         for (let j = 0; j < childArr.length; j++) {
+
+    //             const element = childArr[j];
                 
-                console.log("zzzzzzzzzzzzzzzzzzzzzzzz " + element + selectElement[element].value);
-                console.log(parseInt(selectElement[element].value));
-                let priceInterger = parseInt(selectElement[element].value)
-                totalArray.push(priceInterger);
-            }
-            console.log(totalArray);
-            console.log("£"+_.sum(totalArray)+".00");
+    //             console.log("zzzzzzzzzzzzzzzzzzzzzzzz " + element + selectElement[element].value);
+    //             console.log(parseInt(selectElement[element].value));
+    //             let priceInterger = parseInt(selectElement[element].value)
+    //             totalArray.push(priceInterger);
+    //         }
+    //         console.log(totalArray);
+    //         console.log("£"+_.sum(totalArray)+".00");
             
-            totalInput.value = "£"+_.sum(totalArray)+".00";
+    //         totalInput.value = "£"+_.sum(totalArray)+".00";
 
  
                 
-    let element = document.getElementById("encrypt-button");
-    let invalidCheck = document.getElementById("invalidCheck");
+    // let element = document.getElementById("encrypt-button");
+    // let invalidCheck = document.getElementById("invalidCheck");
 
-            if (totalInput.value == "£0.00") {
-                $(invalidCheck).prop("checked", false);
-                element.classList.add("disabled");
-            } else {
-                invalidCheck.addEventListener('change', () => {
-                    if (invalidCheck.checked && totalInput.value !== "£0.00") {
-                        element.classList.remove("disabled");
+    //         if (totalInput.value == "£0.00") {
+    //             $(invalidCheck).prop("checked", false);
+    //             element.classList.add("disabled");
+    //         } else {
+    //             invalidCheck.addEventListener('change', () => {
+    //                 if (invalidCheck.checked && totalInput.value !== "£0.00") {
+    //                     element.classList.remove("disabled");
                         
-                    }
-                });
-            }
+    //                 }
+    //             });
+    //         }
 
             
 
-        });
-    }
+    //     });
+    // }
 
     // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
@@ -160,8 +271,7 @@ $(document).ready(function(){
     }
     
     booking();
-    calculate();
-
+    // calculate();
     
 
 });
