@@ -62,10 +62,10 @@ $(document).ready(function(){
         renderChoiceLimit:20
     });
 
-// $(".choices__inner").on('click', function() {
 
-//             $("#choices-multiple-remove-button option[value='Choose County']").remove();
-//          });
+ 
+
+
 
     function calculate() {
         var selectElement = document.getElementById('choices-multiple-remove-button');
@@ -76,6 +76,7 @@ $(document).ready(function(){
 
         $(".services-input").on('change', function() {
 
+    this[0].remove();
 
 
             console.log("xxxxxxxxxxxxxxxxxxxxxxxx " + selectElement.childElementCount);
@@ -84,6 +85,7 @@ $(document).ready(function(){
             for (let j = 0; j < childArr.length; j++) {
 
                 const element = childArr[j];
+                
                 console.log("zzzzzzzzzzzzzzzzzzzzzzzz " + element + selectElement[element].value);
                 console.log(parseInt(selectElement[element].value));
                 let priceInterger = parseInt(selectElement[element].value)
