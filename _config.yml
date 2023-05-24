@@ -15,7 +15,7 @@ services:
   - Role play
   - Gender transform
   - Location intimates
-  - Mail order intimates
+  - Location intimates
   - Weigh & measure
   - Gold star orgasm
   - FinDom
@@ -29,4 +29,8 @@ findom_price:
   - 650
 debt_contract_price:
   - 650
+location_intimates_price:
+  - 70
+mail_order_intimates_price:
+  - 40
 relative_permalinks: false
