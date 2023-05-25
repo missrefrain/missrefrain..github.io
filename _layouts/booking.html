@@ -19,13 +19,14 @@
                 </figure>
               
                 <div class="page-content card p-4" >
-                    
-                    
+                    <div id="booking_component"></div>
+                    {% include _booking/booking.html %}
                     {{ content }}
                 </div>
-                {% include footer.html %}
+                
             </div>
-        </div>
+        </div>{% include footer-booking.html %}
         <script></script>
     </body>
 </html>
+
