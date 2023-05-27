@@ -1,38 +1,18 @@
 {% include head-index.html %}
-    <body>
+<body class="d-flex h-100 text-center text-bg-dark">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        {% include header.html %}
-
-
-        <div class="wrap">
-            <h1 class="vulture">WHERE'S<br>THE HUNGRY<br>VULTURE?</h1>
-        </div>
-
-
-
-        <!-- <div class="wrapper">
-            <div class="message">
-                
-                <h1 class="display-3 text-light">{{ site.name }}<small class="fs-6 text-light" style="white-space: pre-line;">{{ site.title }}</small></h1>
-                <figure>
-                    <blockquote class="blockquote">
-                        <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
-                            {{ site.strap }}
-                        </p>
-                    </blockquote>
-                </figure>
-              
-                <div class="page-content card p-4" >
-                    
-
-                    {{ content }}
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            {% include header-index.html %}
+            <main class="px-3">
+                <div class="wrap">
+                    <h1 class="vulture">WHERE'S<br>THE HUNGRY<br>VULTURE?</h1>
                 </div>
-                {% include footer.html %}
-            </div>
-        </div> -->
+                {{ content }}
+            </main>
+            {% include footer-index.html %}
+        </div>
         <script></script>
     </body>
 </html>
