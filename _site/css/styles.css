@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 
 body { 
@@ -66,3 +67,4 @@ ul ul {
 ::marker {
   font-weight: 600!important;
 }
+
