@@ -4,8 +4,33 @@
 <dl class="row pt-4">
     {% assign sorted_faq = entry.items | sort:'title' %}
     {% for item in sorted_faq %}
-    <dt class="col-sm-3 text-capitalize fs-3"><a href="/booking.html" class="text-decoration-none text-dark">{{ item.title }}</a></dt>
-    <dd class="col-sm-9 pb-4 fs-3 lh-sm" style="white-space: break-spaces;"><span class="text-capitalize">{{ item.title }}</span> {{ item.text }}</dd>
+        <dt id="faq-items" class="col-12 text-capitalize fs-3 border-bottom border border-bottom-5 w-100">
+            <a 
+                id="collapseItem-{{ item.slug }}" 
+                href="#collapseItem-text-{{ item.slug }}" 
+                class="text-decoration-none text-dark"
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapseItem-" 
+                data-bs-toggle="collapse"
+            >{{ item.title }} 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+        </a>
+        </dt>
+        <dd class="col-12 fs-3 lh-sm">
+            <div class="collapse pb-4" id="collapseItem-text-{{ item.slug }}" >
+                <span class="text-capitalize">{{ item.title }}</span> <span style="white-space: break-spaces;">{{ item.text }}</span>
+                <div class="d-grid gap-2 pt-3">
+                    <a href="/booking.html" class="btn btn-primary btn-lg rounded-0" id="booking-button">
+                        Book a service
+                    </a>    
+                </div>
+                
+            </div>
+        </dd>
     {% endfor %}
 </dl>
 {% endfor %}
+
