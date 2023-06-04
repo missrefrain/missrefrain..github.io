@@ -1,10 +1,10 @@
 
-{% for entry in site.data.faq.faq %}
+{% for entry in site.data.glossary.glossary %}
 
 <dl class="row pt-4">
-    {% assign sorted_faq = entry.items | sort:'title' %}
-    {% for item in sorted_faq %}
-        <dt id="faq-items" class="col-12 text-capitalize fs-3 border-bottom border border-bottom-5 w-100">
+    {% assign sorted_glossary = entry.items | sort:'title' %}
+    {% for item in sorted_glossary %}
+        <dt id="glossary-items" class="col-12 text-capitalize fs-3 border-bottom border border-bottom-5 w-100">
             <a 
                 id="collapseItem-{{ item.slug }}" 
                 href="#collapseItem-text-{{ item.slug }}" 
