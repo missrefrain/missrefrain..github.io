@@ -9,16 +9,15 @@
         <div class="wrapper">
             <div class="message">
                 
-                <h1 class="display-3 text-light">{{ site.name }}<small class="fs-6 text-light" style="white-space: pre-line;">{{ site.title }}</small></h1>
-                <figure>
-                    <blockquote class="blockquote">
-                        <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
-                            {{ site.strap }}
-                        </p>
-                    </blockquote>
-                </figure>
+                <h1 class="display-3 text-light">Booking</h1>
               
-                <div class="page-content card rounded-0 p-4" >
+                <div class="page-content card rounded-0 p-4">
+                    <p class="fs-3 lh-sm">
+                        To book a service please the form provided below and we will confirm the details of your booking.
+                    </p>
+                    <p class="fs-3 lh-sm">
+                        If you are unsure of which service you would like please refer to the explanation of services provided <a href="/faq.html">here</a>.
+                    </p>
                     <div id="booking_component"></div>
                     {% include _booking/booking.html %}
                     {{ content }}
