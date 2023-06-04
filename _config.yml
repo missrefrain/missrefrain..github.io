@@ -6,31 +6,34 @@ site_path: https://missrefrain.github.io/
 include: ['_pagecontent', '_booking']
 services:
   - Rope bondage
-  - Diaper discipline
   - Corporal punishment
   - Lock chastity
   - Foot worship
-  - Sissy-fication
+  - Sissification
   - Submissive dress up
   - Role play
   - Gender transform
-  - Location intimates
-  - Mail Order intimates
-  - Weigh & measure
+  - Weigh and measure
   - Gold star orgasm
-  - FinDom
-  - Debt contract
   - Fetish modelling
   - Phone sex
   - Masked camming
 hour_rate:
   - 150
+findom_service:
+  - FinDom  
 findom_price:
   - 650
+debt_contract_service:
+  - Debt contract
 debt_contract_price:
   - 650
+location_intimates_service:
+  - Location intimates
 location_intimates_price:
   - 70
+mail_order_intimates_service:
+  - Mail Order intimates  
 mail_order_intimates_price:
   - 40
 relative_permalinks: false

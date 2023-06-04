@@ -18,14 +18,15 @@
                     </blockquote>
                 </figure>
               
-                <div class="page-content card p-4" >
+                <div class="page-content card rounded-0 p-4" >
                     <div id="booking_component"></div>
                     {% include _booking/booking.html %}
                     {{ content }}
+                    {% include footer-booking.html %}
                 </div>
                 
             </div>
-        </div>{% include footer-booking.html %}
+        </div>
         <script></script>
     </body>
 </html>

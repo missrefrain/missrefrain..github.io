@@ -1,0 +1,11 @@
+
+{% for entry in site.data.faq.faq %}
+
+<dl class="row pt-4">
+    {% assign sorted_faq = entry.items | sort:'title' %}
+    {% for item in sorted_faq %}
+    <dt class="col-sm-3 text-capitalize fs-3"><a href="/booking.html" class="text-decoration-none text-dark">{{ item.title }}</a></dt>
+    <dd class="col-sm-9 pb-4 fs-3 lh-sm" style="white-space: break-spaces;"><span class="text-capitalize">{{ item.title }}</span> {{ item.text }}</dd>
+    {% endfor %}
+</dl>
+{% endfor %}

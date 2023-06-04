@@ -3,9 +3,9 @@
 
 /* index styling */
 
-h1 {
+h3 {
 	font-family: 'Anton', cursive;
-	font-size: 12vmin;
+	font-size: 10vmin;
 	text-align: center;
 	line-height: 1;
 	margin: 5px;
@@ -18,7 +18,7 @@ h1 {
 	background-image: url('../assets/indexImg.jpg');
 	filter: brightness(2);
 	background-position: center top;
-	background-size: 125%;
+	background-size: 150%;
 	background-repeat: no-repeat;
 	transition: all 2s ease-in-out;
 }

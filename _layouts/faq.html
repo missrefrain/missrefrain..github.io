@@ -1,0 +1,26 @@
+{% include head.html %}
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        {% include header.html %}
+
+        <div class="wrapper">
+            <div class="message">
+                
+                <h1 class="display-3 text-light">FAQ</h1>
+
+              
+                <div class="page-content card rounded-0 p-4" >
+                    <div id="faq_component"></div>
+                    {% include _faq/faq.html %}
+                    {{ content }}
+                </div>
+                {% include footer.html %}
+                
+            </div>
+        </div>
+
+    </body>
+</html>
