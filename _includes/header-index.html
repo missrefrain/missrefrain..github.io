@@ -3,26 +3,27 @@
 
     <a class="float-md-start mb-0 navbar-brand" href="{% include mainurl.html %}/">
       <img src="{% include mainurl.html %}/assets/MR_logo.svg" alt="{{ site.name }} Logo" style="height:48px;" title="{{ site.name }} - {{ site.title }}">
+      <div class="fw-bold text-light fs-4 text-wrap lh-1 align-top text-start" style="width:20px;display:inline-table;">{{ site.name }}</div>
     </a>
     
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-{%- if site._data.global.navigation -%}
-  {%- assign navigation = site._data.global.navigation -%}
-{%- else -%}
-  {%- assign navigation = '' | split: ',' -%}
+    <nav class="nav nav-masthead justify-content-end float-md-end">
+      {%- if site._data.global.navigation -%}
+        {%- assign navigation = site._data.global.navigation -%}
+      {%- else -%}
+        {%- assign navigation = '' | split: ',' -%}
 
-  {%- capture nav_data -%}
-  {%- include navigation.yml -%}
-  {%- endcapture -%}
+        {%- capture nav_data -%}
+        {%- include navigation.yml -%}
+        {%- endcapture -%}
 
-  {%- assign nav_array = nav_data | split: ' - ' %}
-  {%- for nav_item in nav_array -%}
-    {%- if nav_item != '' -%}
-      {%- assign nav_cleaned = nav_item | strip | replace: 'title: ', '' | replace: '   url: ', '' -%}
-      {%- assign navigation = navigation | push: nav_cleaned -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
+        {%- assign nav_array = nav_data | split: ' - ' %}
+        {%- for nav_item in nav_array -%}
+          {%- if nav_item != '' -%}
+            {%- assign nav_cleaned = nav_item | strip | replace: 'title: ', '' | replace: '   url: ', '' -%}
+            {%- assign navigation = navigation | push: nav_cleaned -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% include mainurl.html %}/">Home</a>
       <a class="nav-link fw-bold py-1 px-0" href="/about.html">About</a>
       <a class="nav-link fw-bold py-1 px-0" href="/booking.html">Book Service</a>

@@ -1,0 +1,20 @@
+<div>
+    
+        {% for img in site.data.about.images %}
+            {% for item in img %}
+                {{ item.url }}
+            {% endfor %}
+        {% endfor %}
+
+        {% for entry in site.data.about.about %}
+
+            {% assign sorted_about = entry.items | sort:'title' %}
+            {% for item in sorted_about %}
+                <p class="fs-3 lh-sm">
+                    {{ site.name }} {{ item.text }}
+                </p>
+            {% endfor %}
+
+        {% endfor %}
+    
+</div>

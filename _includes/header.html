@@ -2,14 +2,15 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{% include mainurl.html %}/">
           <img src="{% include mainurl.html %}/assets/MR_logo.svg" alt="{{ site.name }} Logo" style="height:48px;" title="{{ site.name }} - {{ site.title }}">
+          <div class="fw-bold text-light fs-4 text-wrap lh-1 align-top" style="width:20px;display:inline-table;">{{ site.name }}</div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
 
-                {%- if site._data.global.navigation -%}
+              {%- if site._data.global.navigation -%}
                 {%- assign navigation = site._data.global.navigation -%}
               {%- else -%}
                 {%- assign navigation = '' | split: ',' -%}
@@ -23,6 +24,7 @@
                   {%- if nav_item != '' -%}
                     {%- assign nav_cleaned = nav_item | strip | replace: 'title: ', '' | replace: '   url: ', '' -%}
                     {%- assign navigation = navigation | push: nav_cleaned -%}
+                    {{nav_item}}
                   {%- endif -%}
                 {%- endfor -%}
               {%- endif -%}
@@ -42,13 +44,6 @@
 
             </ul>
         </div>
-
-
-
-
-
-
-
     </div>
 </nav>
 

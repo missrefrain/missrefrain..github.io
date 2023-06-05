@@ -6,21 +6,13 @@
 
         {% include header.html %}
 
-        <div class="wrapper">
-            <div class="message">
+        <div class="container-fluid mt-4 pt-4">
+            <div class="row mt-4 p-md-4 message">
                 
-                <h1 class="display-3 text-light">{{ site.name }}<small class="fs-6 text-light" style="white-space: pre-line;">{{ site.title }}</small></h1>
-                <figure>
-                    <blockquote class="blockquote">
-                        <p class="col-6 fs-5 fw-lighter lh-1 fst-italic text-light">
-                            {{ site.strap }}
-                        </p>
-                    </blockquote>
-                </figure>
-              
-                <div class="page-content card rounded-0 p-4" >
+                <div class="page-content card rounded-0 mt-4 p-md-4 shadow" >
+                    <h1 class="display-3 fw-lighter">About {{ site.name }}</h1>
                     <div id="about_component"></div>
-                    {% include _pagecontent/about.html %}
+                    {% include _about/about.html %}
                     {{ content }}
                 </div>
                 {% include footer.html %}
