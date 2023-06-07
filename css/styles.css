@@ -56,3 +56,24 @@ ul ul {
   font-weight: 600!important;
 }
 
+
+.nav-item a {
+  font-family: 'Anton', cursive;
+}
+
+.img-bg{
+  filter: brightness(1.3) invert(0.17) saturate(2.6) sepia(0.25);
+  opacity:1;
+  visibility:inherit;
+  transform:translate3d(0px, 0px, 0px);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+
+#about-page-text p:first-child {
+  font-size: 1.75rem!important;
+  font-weight: 300!important;
+}

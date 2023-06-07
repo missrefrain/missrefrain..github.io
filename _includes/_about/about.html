@@ -1,20 +1,48 @@
-<div>
-    
-        {% for img in site.data.about.images %}
-            {% for item in img %}
-                {{ item.url }}
+<div class="card mb-3 border-0">
+    <div class="row pr-2">
+        <div class="
+        col-md-8 
+        order-2
+        order-xs-2
+        order-xs-2
+        order-sm-2
+        order-md-1
+        order-lg-1
+        order-xl-1
+        order-xxl-1
+        " id="about-page-text">
+                {% for entry in site.data.about.about %}
+                    {% assign sorted_about = entry.items %}
+                    {% for item in sorted_about %}
+                    <p class="fs-5 lh-sm">
+                        {{ site.name }} {{ item.text }}
+                    </p>
+                    {% endfor %}
+                {% endfor %}
+        </div>
+        <div class="
+        col-md-4 
+        overflow-hidden 
+        order-1
+        order-xs-1
+        order-sm-1
+        order-md-2
+        order-lg-2
+        order-xl-2
+        order-xxl-2
+        " style="display: grid;">
+            {% for entry in site.data.imgs.images %}
+                {% assign sorted_images = entry.about_image %}
+                {% for about_image in sorted_images %}
+                    <div class="img-bg ratio ratio-1x1" 
+                    style="
+                    background-image:radial-gradient(transparent, black),
+                    url('{{ about_image.url }}')
+                    ">
+                    </div>
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
+        </div>
 
-        {% for entry in site.data.about.about %}
-
-            {% assign sorted_about = entry.items | sort:'title' %}
-            {% for item in sorted_about %}
-                <p class="fs-3 lh-sm">
-                    {{ site.name }} {{ item.text }}
-                </p>
-            {% endfor %}
-
-        {% endfor %}
-    
+    </div>
 </div>

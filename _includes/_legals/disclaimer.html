@@ -1,0 +1,11 @@
+
+
+{% for entry in site.data.legals.legal %}
+    {% assign sorted_articles = entry.disclaimer %}
+    {% for disclaimer in sorted_articles %}
+        <p class="fs-6 lh-sm text-light" style="font-size: smaller!important;">
+            {{ disclaimer.title | capitalize }}: {{ disclaimer.text }}
+        </p>
+    {% endfor %}
+{% endfor %}
+

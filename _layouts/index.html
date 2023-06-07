@@ -3,16 +3,48 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            {% include header-index.html %}
-            <main class="px-3 p-4 align-middle">
-                <div class="wrap">
-                    <h3 class="vulture">{{ site.strap }}</h3>
+
+            <div class="container text-center h-25">
+                <div class="row align-items-start">
+
+                    <div class="d-flex align-content-start flex-wrap mb-3">
+                        <div class="col-12 align-self-start">
+                            {% include header-index.html %}
+                        </div>
+                    </div>
+
                 </div>
-                {{ content }}
-            </main>
-            {% include footer-index.html %}
+            </div>
+
+            <div class="container text-center h-75">
+                <div class="row align-items-center">
+                    <div class="d-flex align-content-center flex-wrap">
+                        <main class="px-3 p-4 pt-0 align-middle">
+                            <div class="wrap">
+                                <h1 id="front-page-strap" class="front-page-strap display-1">{{ site.strap }}</h1>
+                            </div>
+                            {{ content }}
+                        </main>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="container text-center h-25">
+                <div class="row align-items-end">
+                    <div class="d-flex align-content-stretch flex-wrap">
+                        {% include footer-index.html %}
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
+
+    
+
         <script></script>
     </body>
 </html>

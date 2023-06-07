@@ -1,0 +1,18 @@
+{
+    "legal": [
+        {
+            "tandc": [
+                {
+                    "title": "terms & conditions",
+                    "text": "{% site.name %}"
+                }
+            ],
+            "disclaimer": [
+                {
+                    "title": "disclaimer",
+                    "text": "When engaging in BDSM activities, including the giving and receiving of pain, should always be based on mutual consent, trust, and respect. It is recommended to educate oneself about safe practices, proper techniques, and risk mitigation to ensure a positive and enjoyable experience for all involved parties."
+                }
+            ]
+        }
+    ]
+}

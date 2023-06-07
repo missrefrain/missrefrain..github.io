@@ -1,0 +1,16 @@
+{
+    "images": [
+        {
+            "logos": [
+                {
+                    "url": "/assets/indexImg.jpg"
+                }
+            ],
+            "about_image": [
+                {
+                    "url": "/assets/leather-jumpsuit-shot.png"
+                }
+            ]
+        }
+    ]
+}  
