@@ -1,0 +1,22 @@
+{% include head.html %}
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        {% include header.html %}
+
+        <div class="container-fluid mt-4 pt-4" style="padding-top:100px!important;">
+            <div class="row mt-4 p-md-4 message">
+                
+                <div class="page-content card rounded-0 mt-4 p-md-4 shadow" >
+                    <div id="terms_and_conditions_component"></div>
+                    {% include _legals/terms-and-conditions.html %}
+                    {{ content }}
+                </div>
+                {% include footer.html %}
+            </div>
+        </div>
+        <script></script>
+    </body>
+</html>

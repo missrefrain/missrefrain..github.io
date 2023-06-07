@@ -70,7 +70,12 @@ $(document).ready(function(){
     function calculate() {
         var selectElement = document.getElementById('choices-multiple-remove-button');
         let totalInput = document.getElementById('Total');
-        totalInput.value = "£0.00";
+        totalInput.value = "0";
+
+        var timeStart = document.getElementById('book-start-time');
+        var timeEnd = document.getElementById('book-end-time');
+        var dateStart = document.getElementById('book-start-date');
+        var dateEnd = document.getElementById('book-end-date');
 
         $(".services-input").on('change', function() {
 
@@ -99,7 +104,13 @@ $(document).ready(function(){
             }
             console.log(totalArray);
             console.log("£"+_.sum(totalArray)+".00");
-            totalInput.value = "£"+_.sum(totalArray)+".00";
+            totalInput.value = _.sum(totalArray);
+
+            console.log("start time:    " + parseInt(timeStart.value) - 24 + "\n" +
+              "end time:    " + parseInt(timeEnd.value) - 24  + "\n" +
+              "amount of days:    " + parseInt(dateStart.value) - parseInt(dateEnd.value)
+            )
+            
 
 
 console.log(servicesArray);
@@ -118,12 +129,12 @@ servicesChosen.innerHTML = replString;
     let element = document.getElementById("encrypt-button");
     let invalidCheck = document.getElementById("invalidCheck");
 
-            if (totalInput.value == "£0.00") {
+            if (totalInput.value == "0") {
                 $(invalidCheck).prop("checked", false);
                 element.classList.add("disabled");
             } else {
                 invalidCheck.addEventListener('change', () => {
-                    if (invalidCheck.checked && totalInput.value !== "£0.00") {
+                    if (invalidCheck.checked && totalInput.value !== "0") {
                         element.classList.remove("disabled");
                         
                     }

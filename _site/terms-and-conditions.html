@@ -13,7 +13,7 @@
         <meta http-equiv='pragma' content='no-cache'>
 
         <link rel="pingback" href="https: //domainname.com/xmlrpc.php" >
-        <title>Booking Service(s)</title>
+        <title>Terms & Conditions</title>
         <!-- style and script resources -->
         <link rel="stylesheet" href="" media="all">
         <script src=""></script>
@@ -25,7 +25,7 @@
         <!--open graph meta tags for social sites and search engines-->
         <meta property="og:locale" content="en_US" >
         <meta property="og:type" content="website" >
-        <meta property="og:title" content= 'Booking Service(s)'>
+        <meta property="og:title" content= 'Terms & Conditions'>
         <meta property="og:description" content='' >
         <meta property="og:url" content="" >
         <meta property="og:site_name" content="" >
@@ -145,361 +145,12 @@ title: Terms & Conditions
   
 
 
-        <div class="container-fluid mt-4 pt-4">
+        <div class="container-fluid mt-4 pt-4" style="padding-top:100px!important;">
             <div class="row mt-4 p-md-4 message">
                 
                 <div class="page-content card rounded-0 mt-4 p-md-4 shadow" >
-                    <h1 class="display-3 text-dark">Book a service with Miss Refrain</h1>
-                    <p class="fs-3 lh-sm">
-                        To book a service please use the form provided below and we will confirm the details of your booking.
-                    </p>
-                    <p class="fs-3 lh-sm">
-                        If you are unsure of which service you would like to purchase, please refer to the explanation of services provided <a class="text-dark fw-bold" href="/glossary.html">here</a>.
-                    </p>
-                    <div id="booking_component"></div>
-                    <section>
-    <div class="row d-flex justify-content-center mt-100 mt-4">
-
-<div className="text-center">
-    <div id="booking_component"></div>
-
-    <form class="col-md-12 row g-3 needs-validation" id="booking" action="https://api.web3forms.com/submit" method="POST">
-
-        <input type="hidden" name="access_key" value="b0d20c07-f3f1-4997-910b-cc3171d8b9db">
-        <input type="hidden" name="subject" value="A new booking from Miss Refrain">
-          <input type="checkbox" name="botcheck" id="" style="display: none;" >
-          <input type="hidden" name="from_name" value="Miss Refrain">
-          <input type="hidden" name="redirect" value='http://127.0.0.1:4000/thanks'>
-
-        <div class="input-group mb-2">
-            <label class="form-label col-12" for="enterName">Enter your name</label>
-            <select id="prefix-choice" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Title" width="20" style="width: auto;" required>
-                <option value='Mr.'>Mr.</option>
-                <option value='Miss.'>Miss.</option>
-                <option value='Ms.'>Ms.</option>
-            </select>
-            
-            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterName" placeholder="John Smythe" name="Name" style="width: 75%;" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please enter your name.
-            </div>
-        </div>
-   
-
-        <div class="col-md-6 pb-2">
-            <label for="enterEmail">Email address</label>
-            <input type="email" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" name="Email Address" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please enter your email address.
-            </div>
-        </div>             
-        <div class="col-md-6 pb-3">
-            <label for="enterEmailConfirm">Confirm Email address</label>
-            <input type="email" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmailConfirm" placeholder="name@example.com" name="Email Address" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please enter your email address.
-            </div>
-        </div>    
-        
-        <div class="col-md-6 pb-2">
-            <label for="enterTelephone">Telephone Number</label>
-            <input type="tel" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephone" placeholder="07970 000 000" name="Phone Number" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please enter your Telephone/Mobile Number.
-            </div>
-        </div>             
-        <div class="col-md-6 pb-3">
-            <label for="enterTelephoneConfirm">Confirm Telephone Number</label>
-            <input type="tel" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephoneConfirm" placeholder="07970 000 000" name="Phone Number" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please enter your email address.
-            </div>
-        </div>
-
-
-        
-        <div class="col-12 mt-1">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="inputAddress" placeholder="1234 Main St" name="Address" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="inputTown">Town</label>
-            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" placeholder="Greenwich" id="inputTown" name="Town" required>
-        </div>
-
-        <div class="col-md-4">
-            <label for="inputState">County</label>
-            <select id="inputState" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="County" required>
-                <option selected>Choose County</option>
-                <optgroup label="England">
-                    <option>Bedfordshire</option>
-                    <option>Berkshire</option>
-                    <option>Bristol</option>
-                    <option>Buckinghamshire</option>
-                    <option>Cambridgeshire</option>
-                    <option>Cheshire</option>
-                    <option>City of London</option>
-                    <option>Cornwall</option>
-                    <option>Cumbria</option>
-                    <option>Derbyshire</option>
-                    <option>Devon</option>
-                    <option>Dorset</option>
-                    <option>Durham</option>
-                    <option>East Riding of Yorkshire</option>
-                    <option>East Sussex</option>
-                    <option>Essex</option>
-                    <option>Gloucestershire</option>
-                    <option>Greater London</option>
-                    <option>Greater Manchester</option>
-                    <option>Hampshire</option>
-                    <option>Herefordshire</option>
-                    <option>Hertfordshire</option>
-                    <option>Isle of Wight</option>
-                    <option>Kent</option>
-                    <option>Lancashire</option>
-                    <option>Leicestershire</option>
-                    <option>Lincolnshire</option>
-                    <option>Merseyside</option>
-                    <option>Norfolk</option>
-                    <option>North Yorkshire</option>
-                    <option>Northamptonshire</option>
-                    <option>Northumberland</option>
-                    <option>Nottinghamshire</option>
-                    <option>Oxfordshire</option>
-                    <option>Rutland</option>
-                    <option>Shropshire</option>
-                    <option>Somerset</option>
-                    <option>South Yorkshire</option>
-                    <option>Staffordshire</option>
-                    <option>Suffolk</option>
-                    <option>Surrey</option>
-                    <option>Tyne and Wear</option>
-                    <option>Warwickshire</option>
-                    <option>West Midlands</option>
-                    <option>West Sussex</option>
-                    <option>West Yorkshire</option>
-                    <option>Wiltshire</option>
-                    <option>Worcestershire</option>
-                </optgroup>
-                <optgroup label="Wales">
-                    <option>Anglesey</option>
-                    <option>Brecknockshire</option>
-                    <option>Caernarfonshire</option>
-                    <option>Carmarthenshire</option>
-                    <option>Cardiganshire</option>
-                    <option>Denbighshire</option>
-                    <option>Flintshire</option>
-                    <option>Glamorgan</option>
-                    <option>Merioneth</option>
-                    <option>Monmouthshire</option>
-                    <option>Montgomeryshire</option>
-                    <option>Pembrokeshire</option>
-                    <option>Radnorshire</option>
-                </optgroup>
-                <optgroup label="Scotland">
-                    <option>Aberdeenshire</option>
-                    <option>Angus</option>
-                    <option>Argyllshire</option>
-                    <option>Ayrshire</option>
-                    <option>Banffshire</option>
-                    <option>Berwickshire</option>
-                    <option>Buteshire</option>
-                    <option>Cromartyshire</option>
-                    <option>Caithness</option>
-                    <option>Clackmannanshire</option>
-                    <option>Dumfriesshire</option>
-                    <option>Dunbartonshire</option>
-                    <option>East Lothian</option>
-                    <option>Fife</option>
-                    <option>Inverness-shire</option>
-                    <option>Kincardineshire</option>
-                    <option>Kinross</option>
-                    <option>Kirkcudbrightshire</option>
-                    <option>Lanarkshire</option>
-                    <option>Midlothian</option>
-                    <option>Morayshire</option>
-                    <option>Nairnshire</option>
-                    <option>Orkney</option>
-                    <option>Peeblesshire</option>
-                    <option>Perthshire</option>
-                    <option>Renfrewshire</option>
-                    <option>Ross-shire</option>
-                    <option>Roxburghshire</option>
-                    <option>Selkirkshire</option>
-                    <option>Shetland</option>
-                    <option>Stirlingshire</option>
-                    <option>Sutherland</option>
-                    <option>West Lothian</option>
-                    <option>Wigtownshire</option>
-                </optgroup>
-                <optgroup label="Northern Ireland">
-                    <option>Antrim</option>
-                    <option>Armagh</option>
-                    <option>Down</option>
-                    <option>Fermanagh</option>
-                    <option>Londonderry</option>
-                    <option>Tyrone</option>
-                </optgroup>
-            </select>
-        </div>
-
-        <div class="col-md-2">
-            <label for="inputZip">Postcode</label>
-            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Postcode" id="inputZip" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="book-start-date">Book start date</label>
-            <input type="date" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-start-date" name="Booking Start Date" required>
-        </div>
-
-        <div class="col-md-6">
-            <label for="book-end-date">Book end date</label>
-            <input type="date" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-end-date" name="Booking End Date" required>
-        </div>
-
-        <div class="col-md-6 pb-4">
-            <label for="book-start-time">Book start time:</label>
-            <select id="book-start-time" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Booking Start Time" required>
-                <option selected>Choose start time</option>
-                <option value=12>12:00</option>
-                <option value=13>13:00</option>
-                <option value="14">14:00</option>
-                <option value="15">15:00</option>
-                <option value="16">16:00</option>
-                <option value="17">17:00</option>
-                <option value="18">18:00</option>
-                <option value="19">19:00</option>
-                <option value="20">20:00</option>
-                <option value="21">21:00</option>
-                <option value="22">22:00</option>
-                <option value="23">23:00</option>
-                <option value="00">00:00</option>
-                <option value="1">01:00</option>
-                <option value="2">02:00</option>
-                <option value="3">03:00</option>
-                <option value="4">04:00</option>
-            </select>
-        </div>
-
-        
-        <div class="col-md-6 pb-4">
-            <label for="book-end-time">Book end time:</label>
-            <select id="book-end-time" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Booking End Time" required>
-                <option selected>Choose end time</option>
-                <option value=12>12:00</option>
-                <option value=13>13:00</option>
-                <option value="14">14:00</option>
-                <option value="15">15:00</option>
-                <option value="16">16:00</option>
-                <option value="17">17:00</option>
-                <option value="18">18:00</option>
-                <option value="19">19:00</option>
-                <option value="20">20:00</option>
-                <option value="21">21:00</option>
-                <option value="22">22:00</option>
-                <option value="23">23:00</option>
-                <option value="00">00:00</option>
-                <option value="1">01:00</option>
-                <option value="2">02:00</option>
-                <option value="3">03:00</option>
-                <option value="4">04:00</option>                     
-            </select>
-        </div>
-
-        </div>
-
-        <div class="col-md-12 pb-4">
-            <label for="book-location">Booking location incl. postcode (for in-person services):</label>
-            <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-location" name="Booking Location">
-        </div>
-
-    
-        <div class="form-group pb-4" id="servicesSelection"> 
-            <label for="choices-multiple-remove-button">Select a service(s)</label>
-            <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input pb-0 mb-0" name="serviceselect" multiple required>
-                <!-- <option name="placeHolder" selected disabled>Choose a service</option> -->
-                <option class="amount" value='150'>Rope bondage @ £150</option>
-                <option class="amount" value='150'>Corporal punishment @ £150</option>
-                <option class="amount" value='150'>Lock chastity @ £150</option>
-                <option class="amount" value='150'>Foot worship @ £150</option>
-                <option class="amount" value='150'>Sissification @ £150</option>
-                <option class="amount" value='150'>Submissive dress up @ £150</option>
-                <option class="amount" value='150'>Role play @ £150</option>
-                <option class="amount" value='150'>Gender transform @ £150</option>
-                <option class="amount" value='150'>Weigh and measure @ £150</option>
-                <option class="amount" value='150'>Fetish modelling @ £150</option>
-                <option class="amount" value='150'>Phone sex @ £150</option>
-                <option class="amount" value='150'>Masked camming @ £150</option>
-                <option class="amount" value='70'>Location intimates @ £70</option>
-                <option class="amount" value='40'>Mail Order intimates @ £40</option>
-                <option class="amount" value='650'>FinDom @ £650*</option>
-                <option class="amount" value='650'>Debt contract @ £650*</option>
-
-                
-            </select>
-            <span class="fs-3 align-middle">*</span> Includes £500.00 fee
-        </div>
-
-        <div class="pb-4">
-            <label for="chosen-services">Chosen Services</label>
-            <div class="container-fluid">
-            <div id="chosen-services" class="row row-cols-auto"></div>
-            </div>
-
-        </div>   
-
-        <div class="input-group input-group-lg mb-3">
-            <span class="input-group-text rounded-0">£</span>
-            <input id="Total" type="text" class="total form-control form-control-lg rounded-0 focus-ring focus-ring-light" aria-label="Amount" name="Services Total" readonly>
-            <span class="input-group-text rounded-0">.00</span>
-        </div>
-
-        <div class="d-grid gap-2 pt-4 mb-4">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="invalidCheck" name="Agreed to T&C's switched" data-bs-toggle="modal" data-bs-target="#tandcModal"required>
-            
-
-                <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before booking.
-                </div>
-            </div>
-        </div>
-
-        <div class="input-group pt-4 pb-4 mb-4">
-            <span class="input-group-text rounded-0 text-start">Additional<br>information</span>
-            <textarea class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" aria-label="Additional information"></textarea>
-        </div>
-
-        <!-- Modal -->
-<div class="modal fade" id="tandcModal" tabindex="-1" aria-labelledby="tandcModalModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        
-            <article class="p-4">
+                    <div id="terms_and_conditions_component"></div>
+                    <article class="p-4">
     
     <h1>Terms and Conditions</h1> 
 
@@ -814,36 +465,55 @@ let date_mod_element = document.getElementById("date-mod");
 const date = new Date(document.lastModified);
 date_mod_element.textContent = `${date.toUTCString()}`;
 
-</script>        
-
- <div class="modal-footer">
-    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Accept</button>
-    </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-        <div class="h-captcha" data-captcha="true"></div>
-
-        <div class="d-grid gap-2 pt-4 mb-4">
-            <button class="btn btn-primary btn-lg rounded-0 disabled" type="submit" id="encrypt-button">
-                 Confirm booking
-            </button>
-        </div>
-
-          <p class="text-base text-center text-gray-400" id="result"></p>
-    </form>
-
-    <script src="https://web3forms.com/client/script.js" async defer></script>
-</div>
-
-</div>
-</section>
+</script>
                     
 
-                    <div class="container-fluid">
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/9.1.0/choices.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/openpgp@5.9.0/dist/openpgp.min.js"></script>
+
+<script src="/js/script.js" async defer></script>
+<script src="/js/main.js" async defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- babel is required in order to parse JSX -->
+
+<script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+<!-- import react.js -->
+
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+<!-- import react-dom.js -->
+
+<!-- <script type="text/babel" src="/js/projects.js"></script> -->
+<!-- import your JS and add - type="text/babel" - otherwise babel wont parse it -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.1.1/marked.min.js" integrity="sha512-+mCmSlBpa1bF0npQzdpxFWIyJaFbVdEcuyET6FtmHmlXIacQjN/vQs1paCsMlVHHZ2ltD2VTHy3fLFhXQu0AMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+
+
+<!-- <script type="text/babel" src="/js/projects-nav.js"></script> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+
+<script type="text/babel" src="/js/main.js"></script>
+
+<div class="container-fluid">
 
   <p class="fw-bold text-light fs-2 lh-1 pt-3 mb-0">Miss Refrain</p>
   <p class="fw-bold text-light fs-6 lh-1 pt-0 mb-0">Professional Dominatrix</p>
@@ -874,7 +544,7 @@ date_mod_element.textContent = `${date.toUTCString()}`;
           </svg> 2023 <a class="text-decoration-none text-light" id="footer-link" href="/">Miss Refrain</a>. All rights reserved.
         </span>
 
-      
+        
 
 
     
@@ -896,59 +566,8 @@ date_mod_element.textContent = `${date.toUTCString()}`;
       </ul>
     </footer>
   </div>
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/9.1.0/choices.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/openpgp@5.9.0/dist/openpgp.min.js"></script>
-
-<script src="/js/script.js" async defer></script>
-<script src="/js/main.js" async defer></script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<!-- babel is required in order to parse JSX -->
-
-<script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
-<!-- import react.js -->
-
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
-<!-- import react-dom.js -->
-
-<!-- <script type="text/babel" src="/js/projects.js"></script> -->
-<!-- import your JS and add - type="text/babel" - otherwise babel wont parse it -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.1.1/marked.min.js" integrity="sha512-+mCmSlBpa1bF0npQzdpxFWIyJaFbVdEcuyET6FtmHmlXIacQjN/vQs1paCsMlVHHZ2ltD2VTHy3fLFhXQu0AMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
-
-
-<!-- <script type="text/babel" src="/js/projects-nav.js"></script> -->
-
-
-<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-
-
-<script type="text/babel" src="/js/booking.js"></script>
-
-
-
-
-                </div>
-                
             </div>
         </div>
         <script></script>
     </body>
 </html>
-

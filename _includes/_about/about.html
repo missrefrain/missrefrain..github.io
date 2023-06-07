@@ -1,5 +1,6 @@
 <div class="card mb-3 border-0">
     <div class="row pr-2">
+
         <div class="
         col-md-8 
         order-2
@@ -19,7 +20,14 @@
                     </p>
                     {% endfor %}
                 {% endfor %}
+
+                <div class="d-grid gap-2 pt-3">
+                    <a href="/booking.html" class="btn btn-primary btn-lg rounded-0" id="booking-button">
+                        Book a service with {{ site.name }}
+                    </a>    
+                </div>
         </div>
+
         <div class="
         col-md-4 
         overflow-hidden 
@@ -45,4 +53,5 @@
         </div>
 
     </div>
+
 </div>

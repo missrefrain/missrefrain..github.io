@@ -77,3 +77,14 @@ ul ul {
   font-size: 1.75rem!important;
   font-weight: 300!important;
 }
+
+#navbarNav ul li a:hover {
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+  border-bottom-width: 3px!important;
+}
+
+
+.choices {
+  padding-bottom: 0px!important;
+  margin-bottom: 0px!important;
+}

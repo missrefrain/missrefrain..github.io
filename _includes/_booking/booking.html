@@ -19,6 +19,7 @@
                 <option value='Miss.'>Miss.</option>
                 <option value='Ms.'>Ms.</option>
             </select>
+            
             <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterName" placeholder="John Smythe" name="Name" style="width: 75%;" required>
             <div class="valid-feedback">
                 Looks good!
@@ -31,7 +32,7 @@
 
         <div class="col-md-6 pb-2">
             <label for="enterEmail">Email address</label>
-            <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" name="Email Address" required>
+            <input type="email" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmail" placeholder="name@example.com" name="Email Address" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -41,7 +42,7 @@
         </div>             
         <div class="col-md-6 pb-3">
             <label for="enterEmailConfirm">Confirm Email address</label>
-            <input type="email" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmailConfirm" placeholder="name@example.com" name="Email Address" required>
+            <input type="email" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterEmailConfirm" placeholder="name@example.com" name="Email Address" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -52,7 +53,7 @@
         
         <div class="col-md-6 pb-2">
             <label for="enterTelephone">Telephone Number</label>
-            <input type="tel" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephone" placeholder="07970 000 000" name="Phone Number" required>
+            <input type="tel" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephone" placeholder="07970 000 000" name="Phone Number" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -62,7 +63,7 @@
         </div>             
         <div class="col-md-6 pb-3">
             <label for="enterTelephoneConfirm">Confirm Telephone Number</label>
-            <input type="tel" class="form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephoneConfirm" placeholder="07970 000 000" name="Phone Number" required>
+            <input type="tel" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="enterTelephoneConfirm" placeholder="07970 000 000" name="Phone Number" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -205,45 +206,75 @@
         </div>
 
         <div class="col-md-6">
-        <label for="book-date">Book date</label>
-            <input type="date" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-date" name="Booking Date" required>
+            <label for="book-start-date">Book start date</label>
+            <input type="date" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-start-date" name="Booking Start Date" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="book-end-date">Book end date</label>
+            <input type="date" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-end-date" name="Booking End Date" required>
         </div>
 
         <div class="col-md-6 pb-4">
-            <label for="book-time">Book time:</label>
-            <select id="book-time" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Booking Time" required>
-                <option selected>Choose time</option>
-                <option>12:00</option>
-                <option>13:00</option>
-                <option>14:00</option>
-                <option>15:00</option>
-                <option>16:00</option>
-                <option>17:00</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
-                <option>22:00</option>
-                <option>23:00</option>
-                <option>00:00</option>
-                <option>01:00</option>
-                <option>02:00</option>
-                <option>03:00</option>
-                <option>04:00</option>                    
+            <label for="book-start-time">Book start time:</label>
+            <select id="book-start-time" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Booking Start Time" required>
+                <option selected>Choose start time</option>
+                <option value=12>12:00</option>
+                <option value=13>13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+                <option value="22">22:00</option>
+                <option value="23">23:00</option>
+                <option value="00">00:00</option>
+                <option value="1">01:00</option>
+                <option value="2">02:00</option>
+                <option value="3">03:00</option>
+                <option value="4">04:00</option>
+            </select>
+        </div>
+
+        
+        <div class="col-md-6 pb-4">
+            <label for="book-end-time">Book end time:</label>
+            <select id="book-end-time" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" name="Booking End Time" required>
+                <option selected>Choose end time</option>
+                <option value=12>12:00</option>
+                <option value=13>13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+                <option value="22">22:00</option>
+                <option value="23">23:00</option>
+                <option value="00">00:00</option>
+                <option value="1">01:00</option>
+                <option value="2">02:00</option>
+                <option value="3">03:00</option>
+                <option value="4">04:00</option>                     
             </select>
         </div>
 
         </div>
 
         <div class="col-md-12 pb-4">
-            <label for="book-location">Book location incl. postcode (for in-person services):</label>
+            <label for="book-location">Booking location incl. postcode (for in-person services):</label>
             <input type="text" class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" id="book-location" name="Booking Location">
         </div>
 
     
         <div class="form-group pb-4" id="servicesSelection"> 
             <label for="choices-multiple-remove-button">Select a service(s)</label>
-            <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input" name="serviceselect" multiple required>
+            <select id="choices-multiple-remove-button" placeholder="Select a service(s)" class="services-input pb-0 mb-0" name="serviceselect" multiple required>
                 <!-- <option name="placeHolder" selected disabled>Choose a service</option> -->
                 <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[0] }} @ £{{ site.hour_rate }}</option>
                 <option class="amount" value='{{ site.hour_rate }}'>{{ site.services[1] }} @ £{{ site.hour_rate }}</option>
@@ -264,7 +295,7 @@
 
                 
             </select>
-            * Includes £500.00 fee
+            <span class="fs-3 align-middle">*</span> Includes £500.00 fee
         </div>
 
         <div class="pb-4">
@@ -275,10 +306,11 @@
 
         </div>   
 
-        <div class="form-group pb-4">
-            <label for="Total">Total</label>
-            <input id="Total" class="total form-control form-control form-control-lg rounded-0 focus-ring focus-ring-light" type="text" value="" aria-label="readonly input" name="Services Total" readonly>
-        </div>   
+        <div class="input-group input-group-lg mb-3">
+            <span class="input-group-text rounded-0">£</span>
+            <input id="Total" type="text" class="total form-control form-control-lg rounded-0 focus-ring focus-ring-light" aria-label="Amount" name="Services Total" readonly>
+            <span class="input-group-text rounded-0">.00</span>
+        </div>
 
         <div class="d-grid gap-2 pt-4 mb-4">
             <div class="form-check form-switch">
@@ -294,6 +326,11 @@
             </div>
         </div>
 
+        <div class="input-group pt-4 pb-4 mb-4">
+            <span class="input-group-text rounded-0 text-start">Additional<br>information</span>
+            <textarea class="form-control form-control-lg rounded-0 focus-ring focus-ring-light" aria-label="Additional information"></textarea>
+        </div>
+
         <!-- Modal -->
 <div class="modal fade" id="tandcModal" tabindex="-1" aria-labelledby="tandcModalModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -303,7 +340,7 @@
         </div>
         <div class="modal-body">
         
-            {% include _pagecontent/terms-and-conditions.html %}        
+            {% include _legals/terms-and-conditions.html %}        
 
  <div class="modal-footer">
     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Accept</button>
