@@ -18,6 +18,15 @@
                 {% include footer.html %}
             </div>
         </div>
-        <script></script>
+        <script>
+            fetch('./_data/about.json')
+              .then(response => response.json())
+              .then(data => {
+                // Use the fetched JSON data here
+                console.log(data);
+              })
+              .catch(error => console.error(error));
+          </script>
+
     </body>
 </html>

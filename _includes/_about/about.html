@@ -1,6 +1,10 @@
 <div class="card mb-3 border-0">
     <div class="row pr-2">
 
+ 
+
+
+
         <div class="
         col-md-8 
         order-2
@@ -16,10 +20,19 @@
                     {% assign sorted_about = entry.items %}
                     {% for item in sorted_about %}
                     <p class="fs-5 lh-sm">
-                        {{ site.name }} {{ item.text }}
+                         {{ item.text }}
                     </p>
                     {% endfor %}
                 {% endfor %}
+
+                {% for entry in site.data.about.more %}
+                    {% assign sorted_more = entry.items %}
+                    {% for item in sorted_more %}
+                    <p class="fs-5 lh-sm">
+                         {{ item.text }}
+                    </p>
+                    {% endfor %}
+                {% endfor %}                
 
                 <div class="d-grid gap-2 pt-3">
                     <a href="/booking.html" class="btn btn-primary btn-lg rounded-0" id="booking-button">
@@ -55,3 +68,5 @@
     </div>
 
 </div>
+
+

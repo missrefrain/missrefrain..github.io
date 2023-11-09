@@ -154,6 +154,10 @@ title: Terms & Conditions
                     <div class="card mb-3 border-0">
     <div class="row pr-2">
 
+ 
+
+
+
         <div class="
         col-md-8 
         order-2
@@ -169,10 +173,12 @@ title: Terms & Conditions
                     
                     
                     <p class="fs-5 lh-sm">
-                        Miss Refrain is a natural dominatrix in everday life and by nature, she is referred to as a 'domme' or 'dominant' and is a person who is naturally suited to a dominant role in BDSM (Bondage, Discipline, Dominance, Submission, Sadism, and Masochism) activities and within a professional capacity in the BDSM industry, she also engages in dominance and submission dynamics in her personal relationship.
+                         Miss Refrain is a natural dominatrix in everday life and by nature, she is referred to as a 'domme' or 'dominant' and is a person who is naturally suited to a dominant role in BDSM (Bondage, Discipline, Dominance, Submission, Sadism, and Masochism) activities and within a professional capacity in the BDSM industry, she also engages in dominance and submission dynamics in her personal relationship.
                     </p>
                     
                 
+
+                                
 
                 <div class="d-grid gap-2 pt-3">
                     <a href="/booking.html" class="btn btn-primary btn-lg rounded-0" id="booking-button">
@@ -208,6 +214,8 @@ title: Terms & Conditions
     </div>
 
 </div>
+
+
 
                     
 
@@ -311,6 +319,15 @@ title: Terms & Conditions
   </div>
             </div>
         </div>
-        <script></script>
+        <script>
+            fetch('./_data/about.json')
+              .then(response => response.json())
+              .then(data => {
+                // Use the fetched JSON data here
+                console.log(data);
+              })
+              .catch(error => console.error(error));
+          </script>
+
     </body>
 </html>
